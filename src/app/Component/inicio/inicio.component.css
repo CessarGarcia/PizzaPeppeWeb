@@ -1,0 +1,66 @@
+.carousel-inner {
+    max-height: 80rem;
+}
+
+.container{
+    width: 96%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    height: 550px;
+    padding-bottom: 50px;
+}
+
+span{
+   background-color: orangered;
+   width: 35px;
+   height: 35px;
+}
+.carousel-indicators{
+    background-color: orangered;
+}
+
+.container-Fb{
+    width: 48%;
+    background-color: rgb(60, 177, 255);
+    margin-left: 10px;
+    margin-bottom: 25px;
+    float: left;
+}
+
+.container-Ig{
+    width: 48%;
+    background-color: rgb(255, 60, 245);
+    float: right;
+    margin-right: 10px;
+}
+
+.btns{
+    margin: auto;
+    margin-left: 20%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px){
+    .container-Fb{
+        width: 100%;
+        float: none;
+        margin: auto;
+        padding: auto;
+    }
+    .container-Ig{
+        float: none;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: auto;
+    }
+    img{
+        height: 250px;
+    }
+}

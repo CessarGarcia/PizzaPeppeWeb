@@ -1,0 +1,521 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+</style>
+
+<div class="menucompleto">
+  <img [src]="menuCompleto" alt="Menu Completo">
+</div>
+
+<div class="details">
+  <!--Details Menú Pizza-->
+  <details>
+      <summary>Menu Pizzas </summary>
+      <div>
+        <img class="img-navMenu" [src]="Pizza" alt="Menu Pizzas">
+      </div>
+
+      <div>
+        <!-- Pizzas 1 Igrediente -->
+        <details>
+          <summary>Con 1 Igrediente</summary>
+          <div class="flex">
+              
+            <!--  Pizza Pepperoni  -->
+          <div class="menuItems desing-flex">
+            <div class="title">
+              <p>Pepperoni</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="AP1IgPepperoni" alt="Pizza Pepperoni" class="menuImg">
+              <p class="P-menu">Pizza 1 Ingrediente – Pepperoni</p>
+              <p class="P-menu pb-3" style="color: red;">$99.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+            </div>
+          </div>
+
+           <!--  Pizza Jamón   -->
+           <div class="menuItems desing-flex">
+            <div class="title">
+              <p>Jamón</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="AP1IgJamon" alt="Pizza Jamón" class="menuImg">
+              <p class="P-menu">Pizza 1 Ingrediente – Jamón </p>
+              <p class="P-menu pb-3" style="color: red;">$99.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+            </div>
+           </div>
+
+          <!--  Pizza Queso  -->
+          <div class="menuItems h-auto w-300"> <!--Aquí se obto por colocar el estilo "h-auto" en vez de "desing-flex" para un tamaño correcto-->
+            <div class="title">
+              <p>Queso</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="AP1IgQueso" alt="Pizza Queso" class="menuImg">
+              <p class="P-menu">Pizza 1 Ingrediente – Queso</p>
+              <p class="P-menu pb-3" style="color: red;">$99.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+            </div>
+          </div>
+          </div>
+        </details>
+      </div> <!--Div Container Mayor-->
+
+      <div>
+        <!-- Pizzas Especialidad A -->
+        <details>
+          <summary>Especialidad A</summary>
+          <div class="flex"> <!--Div mayor-->
+
+                  <!--Pizza Hawaina-->
+            <div class="menuItems desing-flex h-auto w-300">
+              <div class="title">
+                <p>Hawaiana</p>
+                <hr>
+              </div>
+              <div class="menu">
+                <img [src]="BPEHawaiana" alt="Pizza Hawaiana" class="menuImg">
+                <p class="P-menu">Pizza Especialidad – Hawaiana</p>
+                <p class="P-menu pb-3" style="color: red;">$155.00 Mxn</p>
+                <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+              </div>
+            </div>
+            
+              <!--Pizza Mexicana -->
+            <div class="menuItems desing-flex h-auto w-300">
+              <div class="title">
+                <p>Mexicana</p>
+                <hr>
+              </div>
+              <div class="menu">
+                <img [src]="BPEMexicana" alt="Pizza Mexicana" class="menuImg">
+                <p class="P-menu">Pizza Especialidad – Mexicana</p>
+                <p class="P-menu pb-3" style="color: red;">$155.00 Mxn</p>
+                <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+              </div>
+            </div>
+
+            <!--Pizza Vegetariana -->
+          <div class="menuItems desing-flex h-auto w-300">
+            <div class="title">
+              <p>Vegetariana</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="BPEVegetariana" alt="Pizza Vegetariana" class="menuImg">
+              <p class="P-menu">Pizza 1 Ingrediente – Vegetariana</p>
+              <p class="P-menu pb-3" style="color: red;">$155.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+            </div>
+          </div>
+
+          <!--Pizza 3 Carnes -->
+          <div class="menuItems desing-flex h-auto w-300">
+            <div class="title">
+              <p>3 Carnes</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="BPE3Carnes" alt="Pizza Hawaiana" class="menuImg">
+              <p class="P-menu">Pizza 1 Ingrediente – 3 Carnes</p>
+              <p class="P-menu pb-3" style="color: red;">$155.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+            </div>
+          </div>
+
+          </div>
+        </details>
+      </div>
+
+      <div>
+        <!-- Pizzas Especialidad B -->
+        <details>
+          <summary>Especialidad B</summary>
+              <!--Pizza Suprema-->
+          <div class="menuItems">
+            <div class="title">
+              <p>Suprema</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="CPESuprema" alt="Pizza Suprema" class="menuImg">
+              <p class="P-menu">Pizza Especialidad – Suprema</p>
+              <p class="P-menu pb-3" style="color: red;">$165.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+            </div>
+          </div>
+               <!--Pizza Tropical -->
+          <div class="menuItems">
+            <div class="title">
+              <p>Tropical</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="CPETropical" alt="Pizza Tropical" class="menuImg">
+              <p class="P-menu">Pizza Especialidad – Tropical</p>
+              <p class="P-menu pb-3" style="color: red;">$165.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+            </div>
+          </div>
+        </details>
+      </div>
+  </details>
+  
+  <!--Details Menú Bebidas-->
+  <details>
+    <summary>Menu Bebidas </summary>
+    <div>
+      <img class="img-navMenu" [src]="Refrescos" alt="Menu Refrescos">
+    </div>
+
+    <div>
+      <!-- Bebidas - Refrescos -->
+      <details>
+        <summary>Refrescos</summary>
+               <!--  Refreso 1Lt  -->
+          <div class="menuItems-Refrescos">
+            <div class="title-Refrescos">
+              <p>Refreso 1Lt</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="RefrescosCocaCola" alt="Refreso 1Lt" class="img-navMenu-Refrescos">
+              <p class="P-menu">Refreso – 1 Lt</p>
+              <p class="P-menu pb-3" style="color: red;">$25.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+            </div>
+          </div>
+
+            <!--  Refreso 1.5 Lt  -->
+          <div class="menuItems-Refrescos">
+            <div class="title-Refrescos">
+              <p>Refreso 1.5 Lt</p>
+               <hr>
+            </div>
+            <div class="menu">
+              <img [src]="RefrescosCocaCola" alt="Refreso 1Lt" class=" img-navMenu-Refrescos">
+              <p class="P-menu">Refreso – 1.5 Lt</p>
+              <p class="P-menu pb-3" style="color: red;">$30.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+             </div>
+          </div>
+
+        <!--  Refreso 2 Lt  -->
+        <div class="menuItems-Refrescos">
+          <div class="title-Refrescos">
+            <p>Refreso 2 Lt</p>
+             <hr>
+          </div>
+          <div class="menu">
+            <img [src]="RefrescosCocaCola" alt="Refreso 1Lt" class=" img-navMenu-Refrescos">
+            <p class="P-menu">Refreso – 2 Lt</p>
+            <p class="P-menu pb-3" style="color: red;">$40.00 Mxn</p>
+            <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+           </div>
+        </div>
+
+        <!--  Refreso 600 Ml -->
+        <div class="menuItems-Refrescos">
+          <div class="title-Refrescos">
+            <p>Refreso 600 Ml</p>
+             <hr>
+          </div>
+          <div class="menu">
+            <img [src]="RefrescosCocaCola" alt="Refreso 1Lt" class=" img-navMenu-Refrescos">
+            <p class="P-menu">Refreso – 600 Ml</p>
+            <p class="P-menu pb-3" style="color: red;">$20.00 Mxn</p>
+            <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+           </div>
+        </div>
+      
+       <!--  Refreso 500 Ml -->
+       <div class="menuItems-Refrescos">
+        <div class="title-Refrescos">
+          <p>Refreso 500 Ml</p>
+           <hr>
+        </div>
+        <div class="menu">
+          <img [src]="RefrescosCocaCola" alt="Refreso 1Lt" class=" img-navMenu-Refrescos">
+          <p class="P-menu">Refreso – 500 Ml</p>
+          <p class="P-menu pb-3" style="color: red;">$15.00 Mxn</p>
+          <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+         </div>
+      </div> 
+
+      <!--  Refreso Lata -->
+         <div class="menuItems-Refrescos">
+          <div class="title-Refrescos">
+            <p>Refreso Lata</p>
+             <hr>
+          </div>
+          <div class="menu">
+            <img [src]="RefrescosLata" alt="Refreso 1Lt" class=" img-navMenu-Refrescos">
+            <p class="P-menu">Refreso – Lata</p>
+            <p class="P-menu pb-3" style="color: red;">$15.00 Mxn</p>
+            <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+           </div>
+        </div> 
+      </details>
+
+      <!-- Bebidas - Agua -->
+      <details>
+        <summary>Agua Ciel</summary>
+                <!--  Agua Ciel 1Lt  -->
+          <div class="menuItems-Refrescos">
+            <div class="title-Refrescos">
+              <p>Agua Ciel Sabores 1Lt</p>
+               <hr>
+            </div>
+            <div class="menu">
+              <img [src]="AguaCielSabores" alt="Refreso 1Lt" class=" img-navMenu-Refrescos">
+              <p class="P-menu">Agua Ciel - Sabores - 1Lt</p>
+              <p class="P-menu pb-3" style="color: red;">$20.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+             </div>
+            </div>
+
+            <!--  Agua Ciel 1Lt  -->
+          <div class="menuItems-Refrescos">
+            <div class="title-Refrescos">
+              <p>Agua Ciel 1Lt</p>
+               <hr>
+            </div>
+            <div class="menu">
+              <img [src]="AguaCiel" alt="Refreso 1Lt" class=" img-navMenu-Refrescos">
+              <p class="P-menu">Agua Ciel 1Lt</p>
+              <p class="P-menu pb-3" style="color: red;">$20.00 Mxn</p>
+              <button type="button" class="btn btn-success btn-card"> <i class="bi bi-cart-check"></i> Añadir Al Carrito</button>
+             </div>
+            </div>
+      </details>
+    </div>
+  </details>
+
+   <!--Details Menú Combos-->
+   <details>
+    <summary>Menu Combos </summary>
+    <div>
+      <img class="img-navMenu" [src]="Combos" alt="Menu Combos"> 
+      <br>
+    </div>
+    <br><br><br><br>
+
+    <table lang="es" class="table table-bordered table-hover align-items-center table-responsive">
+      <thead class="table-red">
+        <tr class="tr-Titulo">
+          <th scope="col"> Nombre</th>
+          <th scope="col"> Precio</th>
+          <th scope="col"> Descripción </th>
+          <th scope="col"> Agregar al Carrito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Combos of Menu">
+          <td>{{Combos.Id}}</td>
+          <td>{{Combos.Precio}}</td>
+          <td>{{Combos.Descripcion}} <br/> </td> 
+          <a class="btn btn-success active" role="button">Añadir al carrito</a>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+
+  <!--Details Menú Aderezos -->
+  <details>
+    <summary>Menu Aderezos  </summary>
+    <div>
+      <img class="img-navMenu" [src]="Aderezos" alt="Menu Aderezos ">
+    </div>
+
+    <table class="table table-hover table-bordered table-Aderezos">
+      <thead>
+        <tr class="table-green">
+          <th scope="col">Nombre</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Tomate</th>
+          <a class="btn btn-success active btn-card-aderezos m-3" role="button"> <i class="bi bi-cart-check"></i></a>
+        </tr>
+
+        <tr>
+          <th scope="row">Ranch</th>
+          <a class="btn btn-success active btn-card-aderezos m-3" role="button"><i class="bi bi-cart-check"></i></a>
+        </tr>
+
+        <tr>
+          <th scope="row">Búfalo</th>
+          <a class="btn btn-success active btn-card-aderezos m-3" role="button"><i class="bi bi-cart-check"></i></a>
+        </tr>
+
+        <tr>
+          <th scope="row">Chipotle</th>
+          <a class="btn btn-success active btn-card-aderezos m-3" role="button"><i class="bi bi-cart-check"></i></a>
+        </tr>
+
+        <tr>
+          <th scope="row">Queso Amarrillo</th>
+          <a class="btn btn-success active btn-card-aderezos m-3" role="button"><i class="bi bi-cart-check"></i></a>
+        </tr>
+
+        <tr>
+          <th scope="row">Lemon Pepper</th>
+          <a class="btn btn-success active btn-card-aderezos m-3" role="button"><i class="bi bi-cart-check"></i></a>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+
+  <!--Details Menú Complementos-->
+  <details>
+    <summary>Menu Complementos </summary>
+    <div>
+      <img class="img-navMenu" [src]="Complementos" alt="Menu Complementos">
+    </div>
+    <div>
+      <details>
+        <summary>Extras</summary>
+        <div class="flex">
+
+          <!--  Extras -> Alitas   -->
+          <div class="menuItems-Refrescos desing-flex w-300 m-1 mb-2">
+            <div class="title-Refrescos">
+              <p>Alitas</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="CAAlitas" alt="Refreso 1Lt" class="img-navMenu">
+              <p class="P-menu pb-3 pt-3" style="color: red;">$99.00 Mxn</p>
+              <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+            </div>
+          </div>
+          
+            <!--  Extras -> boneless   -->
+            <div class="menuItems-Refrescos desing-flex w-300 m-1 mb-2">
+              <div class="title-Refrescos">
+                <p>Boneless</p>
+                <hr>
+              </div>
+              <div class="menu">
+                <img [src]="CBBoneless" alt="Refreso 1Lt" class="img-navMenu">
+                <p class="P-menu pb-3 pt-3" style="color: red;">$99.00 Mxn</p>
+                <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+              </div>
+            </div>
+            
+             <!--  Extras -> Dedos con Queso   -->
+             <div class="menuItems-Refrescos desing-flex w-300 m-1 mb-2">
+              <div class="title-Refrescos">
+                <p>Dedos con Queso</p>
+                <hr>
+              </div>
+              <div class="menu">
+                <img [src]="CFDedosDeQueso" alt="Refreso 1Lt" class="img-navMenu">
+                <p class="P-menu pb-3 pt-3" style="color: red;">$50.00 Mxn</p>
+                <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+              </div>
+            </div>
+  
+             <!--  Extras -> Espagueti  -->
+             <div class="menuItems-Refrescos desing-flex w-300 m-1 mb-2">
+              <div class="title-Refrescos">
+                <p>Espagueti</p>
+                <hr>
+              </div>
+              <div class="menu">
+                <img [src]="CGEspagueti" alt="Refreso 1Lt" class="img-navMenu">
+                <p class="P-menu pb-3 pt-3" style="color: red;">$50.00 Mxn</p>
+                <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+              </div>
+            </div>
+  
+            <!--  Extras -> Pan con Ajo  -->
+            <div class="menuItems-Refrescos desing-flex w-300 m-1 mb-2">
+              <div class="title-Refrescos">
+                <p>Pan con Ajo</p>
+                <hr>
+              </div>
+              <div class="menu">
+                <img [src]="CHPanConAjo" alt="Refreso 1Lt" class="img-navMenu">
+                <p class="P-menu pb-3 pt-3" style="color: red;">$40.00 Mxn</p>
+                <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+              </div>
+            </div>
+  
+            
+            <!--  Extras -> Tenders  -->
+            <div class="menuItems-Refrescos desing-flex w-300 m-1 mb-2">
+              <div class="title-Refrescos">
+                <p>Tenders</p>
+                <hr>
+              </div>
+              <div class="menu">
+                <img [src]="CITenders" alt="Refreso 1Lt" class="img-navMenu">
+                <p class="P-menu pb-3 pt-3" style="color: red;">$99.00 Mxn</p>
+                <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+              </div>
+            </div>
+        </div>
+
+      </details>
+    </div>
+
+    <div>
+      <details>
+        <summary>Papas</summary>
+        <div class="flex">
+          <!--  Extras -> Papas en Gajo   -->
+          <div class="menuItems-Refrescos w-300 m-1 mb-2">
+            <div class="title-Refrescos">
+              <p>Papas en Gajo</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="CCPapasEnGajo" alt="Refreso 1Lt" class="img-navMenu">
+              <p class="P-menu pb-3 pt-3" style="color: red;">$55.00 Mxn</p>
+              <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+            </div>
+          </div>
+  
+           <!--  Extras -> CONOPAPAS   -->
+           <div class="menuItems-Refrescos w-300 m-1 mb-2">
+            <div class="title-Refrescos">
+              <p>CONOPAPAS</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="CDConopapa" alt="Refreso 1Lt" class="img-navMenu">
+              <p class="P-menu pb-3 pt-3" style="color: red;">$85.00 Mxn</p>
+              <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+            </div>
+          </div>
+  
+          <!--  Extras -> CEPapasCriscut   -->
+          <div class="menuItems-Refrescos w-300 m-1 mb-2">
+            <div class="title-Refrescos">
+              <p>Papas Criscut</p>
+              <hr>
+            </div>
+            <div class="menu">
+              <img [src]="CDConopapa" alt="Refreso 1Lt" class="img-navMenu">
+              <p class="P-menu pb-3 pt-3" style="color: red;">$55.00 Mxn</p>
+              <a class="btn btn-success active btn-card-aderezos" role="button"> <i class="bi bi-cart-check"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </details>
+    </div>
+</details>
+</div>
+
+<!--
+  Algunos de los iconos fueron conseguidos por:
+  <a href="https://www.flaticon.com/free-icons/pizza" title="pizza icons">Pizza icons created by Freepik - Flaticon</a>
+-->

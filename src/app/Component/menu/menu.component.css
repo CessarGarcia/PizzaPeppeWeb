@@ -1,0 +1,320 @@
+.menucompleto{
+    background-color: #abb8c354;
+}
+
+.img-navMenu{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    margin-left: 15px;
+    padding-bottom: 25px;
+    float: left;  
+}
+
+.img-navMenu-Refrescos{
+    border-radius: 50px;
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    margin-left: 15px;
+    padding-bottom: 25px;
+    float: left; 
+}
+
+.details{
+    position:relative;
+}
+
+details{
+    background-color: rgba(8, 144, 255, 0.5);
+    width: 80%;
+    height: auto;
+    border-radius: 30px;
+    margin: 5px;
+    overflow: hidden;
+    display: inline-block;
+    z-index: 30;
+    position: relative;
+}
+
+summary{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.menuItems{
+    background-color: rgb(218, 216, 216);
+    border-radius: 15px;
+    border-color: #7F7F7F;
+    border-style: solid;
+    border-width: 7px;
+    width: auto;
+    height: 430px;
+    margin: auto;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.menuItems-Refrescos{
+    background-color: rgb(218, 216, 216);
+    border-radius: 15px;
+    border-color: #7F7F7F;
+    border-style: solid;
+    border-width: 7px;
+    width: 500px;
+    height: 210px;
+    margin: auto;
+    margin-top: 15px;
+    align-items: center;
+}
+.desing-flex{ /*Contorno flex*/
+    flex: auto;
+    background-position: center;
+    height: auto;
+}
+.flex{   /*Desing Flex*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.title-Refrescos{
+    background-color: #FF0000;
+    width: 80%;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 10px;
+}
+.title-Refrescos > p{
+    font-size: 20px;
+}
+
+.menuImg{
+    padding-top: 20px;
+}
+.title{
+    background-color: #FF0000;
+    width: 80%;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 10px;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin-bottom: -1px;
+}
+.P-menu{
+    color: #5f5e5e;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+}
+
+hr{
+    width: 80%;
+    color:#404040;
+    position: relative;
+    margin: auto;
+}
+
+.btn-card{
+    border-radius: 20px;
+    padding: 0 auto;
+    margin-right: 10px ;
+    height: 40px;
+    float: right;
+}
+
+.tr-Titulo{
+    background-color: rgb(212, 0, 255);
+    color: #fff;
+}
+.table-responsive{
+    width: auto;
+    margin: auto;
+    margin-bottom: 15px;
+    display: table;
+}
+
+            /*Estilos para la tabla Aderezos */
+.table-green{
+    background-color: rgba(0, 255, 55, 0.8);
+}
+
+.table-Aderezos{
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.btn-card-aderezos{
+    padding: 0 auto;
+    border-radius: 20px;
+    margin-top: 5px;
+    height: auto;
+}
+
+        /*Estilos Para complementos*/
+.w-300{
+    width: 250px;
+    height: 200px;
+}
+
+.h-auto{
+    height: auto;
+    width: 400px !important;
+}
+
+@media screen and (max-width: 800px){
+    img{
+        width: 300px;
+        height: 200px;
+    }
+    .menuItems{
+        width: auto;
+        height: 400px;
+    }
+    .menuImg{
+        width: auto;
+        height: auto;
+    }
+    .P-menu{
+        font-size: 15px;
+    }
+    .btn-card{
+        padding: 0 auto;
+    }
+    .menuItems-Refrescos{
+        width: auto;
+        height: 200px;
+        display: inline;
+
+    }
+    .table-responsive{
+        width: auto;
+        margin: auto;
+        padding: auto;
+    }
+    .w-300{
+        width: 300px;
+        height: 450px;
+    }
+    .h-auto{
+        height: auto;
+        width: 400px !important;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .title > p{
+        font-size: 15px;
+    }
+    .title{
+        width: 100px;
+        height: auto;
+    }
+    .menuItems{
+        width: 170px;
+        height: 300px;
+    }
+    .menuImg{
+        width: 100px;
+        height: 130px;
+        margin-bottom: 8px;
+    }
+    .P-menu{
+        font-size: 9px;
+    }
+    .btn-card{
+        width: 120px;
+        height: 30px;
+        padding-top: 10px;
+        padding: 0 auto;
+        font-size: 10px;
+    }
+    .img-navMenu-Refrescos{
+        width: 50px;
+        height: 65px;
+    }
+    .menuItems-Refrescos{
+        width: auto;
+        height: 150px;
+        display: inline-block;
+    }
+    .table-responsive{
+        width: auto;
+        margin: auto;
+        padding: auto;
+    }
+    .table-Aderezos{
+        width: auto;
+        display: inline-block;
+        margin-bottom: 35px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .w-300{
+        width: 300px;
+        height: 450px;
+    }
+    .h-auto{
+        height: auto;
+        width: 400px !important;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .menuItems-Refrescos{
+        width: auto;
+        height: 200px;
+    }
+    .btn-card{
+       padding-bottom: -80px;
+       margin-bottom: -80px;
+       padding: 0 auto;
+    }
+    .menuItems-Refrescos{
+        width: auto;
+        height: 150px;
+        display: inline-block;
+    }
+    .title-Refrescos > p{
+        font-size: 15px;
+    }
+    .table-responsive{
+        width: 300px;
+        overflow-x: auto;
+        display: block;
+    }
+    .table-Aderezos{
+        width: auto;
+        display: inline-block;
+        margin-bottom: 35px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .w-300{
+        width: auto;
+        height: 450px;
+        padding: 15px;
+    }
+    .h-auto{
+        height: auto;
+        width: 400px !important;
+    }
+}

@@ -1,0 +1,115 @@
+/*   Header  */
+header {
+	background-color: rgb(241, 91, 38);
+	width: 100%;
+	height: 300px;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, rgb(255,102,0), rgb(241,91,38), rgb(255,51,0));
+    background: linear-gradient(to right,rgb(255,102,0),rgb(241,91,38),rgb(255,51,0));
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+    /*Efecto Oceano*/
+.wave {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+    /* Fin de Efecto Oceano */
+
+.nav {
+    text-align: right;
+    padding: 30px 50px 0 0;
+    text-decoration: none;
+    margin-left: 30px;
+    justify-content: right;
+    position: sticky;
+}
+
+.nav>a {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.nav>a:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255);
+}
+
+.logo{
+	float:left;
+	margin-right: 2%;
+    width: 70px;
+    border-radius: 50%;
+}
+.toggleMenu {
+    display:  none;
+  	padding:4px 5px 0px 5px;
+}
+
+header .textos-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.NombreNegocio {
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    font-style: oblique;
+    Font-weight: bold;
+}
+.Authentication{
+    background-color: rgb(65, 145, 219);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.Authentication:hover{
+    background-color: rgb(19, 132, 236);
+}
+
+.btn-car{
+    background-color: #0F2027;
+    border-radius: 100%;
+}
+/* Media Query */
+@media (min-width: 1024px) {
+    #SeccionMenu {
+        width: 850px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    .Style-Text-Ubicación {
+        padding-top: 130px;
+    }
+    .Style-Map {
+        padding-right: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .nav>a{
+        font-size: 15px;
+    }
+
+    header{
+        height: 400px;
+    }
+}

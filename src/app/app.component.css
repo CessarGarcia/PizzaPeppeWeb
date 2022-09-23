@@ -1,0 +1,39 @@
+*{
+	padding: 0; 
+	margin: 0; 
+	box-sizing: border-box;
+	text-align: center;
+	/*font-family: 'Belleza', sans-serif;*/
+}
+
+
+button {
+	border: none;
+	outline: none;
+	margin-top: 20px;
+  padding: 10px 20px;
+	border-radius: 50px;
+	color: rgb(237, 7, 122);
+	background: rgba(255, 255, 255, 0.719);
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button:hover{
+	cursor: pointer;
+  background-color: #FFF;
+}
+
+.carousel-inner {
+    max-height: 80rem;
+}
+
+@media (min-width: 1024px) {
+    #SeccionMenu {
+        width: 850px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+}

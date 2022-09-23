@@ -1,0 +1,127 @@
+body {
+    background-image: url(https://bit.ly/3S8y1gi);
+    background-size: 400%;
+}
+
+.container{
+    align-items: center;
+    justify-content: center;
+    margin-left: 75px;
+}
+.container-col{
+    background-color: #919191;
+   /* height: auto;*/
+   height: 450px;
+   margin-bottom: 55px;
+   margin: 15px;
+   margin-top: 55px;
+}
+
+        /* Diseño para el Resumen del pedido  */
+.table-responsive{
+    width: auto;
+    margin: auto;
+    padding: auto;
+}
+
+.tr-Titulo{
+    background-color: rgb(212, 0, 255);
+    color: #fff;
+}
+
+th{
+    width: 150px;
+}
+
+
+        /*Diseño para metodo de pago */
+input{
+    width: 15px;
+    height: 15px;    
+}
+
+.MPay{
+    background-color: #BFBFBF;
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+    margin: 3px auto;
+    color: rgb(10, 75, 119);
+    font-size: 25px;
+}
+
+.MPay:hover{
+    background-color: #918e8e;
+    cursor: pointer;
+}
+label:hover{
+    cursor: pointer;
+}
+svg{
+    color: #000;
+}
+abbr{
+    text-decoration: none;
+}
+
+        /* Diseño Metodo de pago */
+abbr>p{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    height: 35px;
+    font-weight: bold;
+}
+
+em{
+    font-size: 15px;
+    color: rgb(61, 59, 59);
+}
+
+.GranTotal{
+    font-size: 15px;
+    text-align: left;
+    color: red !important;
+    font-weight: bolder;
+}
+
+.btn-deg{
+    background: -webkit-repeating-linear-gradient(-45deg, #00EF6A, #00F788, #25dd28, #12da55, #01F682, #01F4C3, #01b6fd);
+    background-size: 1px 100px;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 30px;
+    height: 60px;
+    animation: animate 10s ease-in-out infinite;
+    float: right;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    25% {
+        background-position: 100% 0;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+        /*Diseño responsivo*/
+@media screen and (max-width: 800px){
+    .container{
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,162 @@
+body {
+    background: url("https://bit.ly/3S8y1gi") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Roboto";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.imgs {
+    background-color: #7ef0bb;
+    opacity: 65%;
+    height: 600px;
+    margin: 10px;
+}
+
+.container-carousel {
+    width: 37%;
+    background-color: rgb(60, 177, 255);
+    margin-left: 10px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+img {
+    opacity: 100% !important;
+    position: sticky;
+    z-index: -1;
+    height: 300px;
+    width: 450px;
+    margin-top: 55px;
+    margin-left: 5px;
+}
+
+/*Estilos para forms*/
+.container-forms {
+    width: 48%;
+    background-color: rgb(255, 60, 245);
+    margin-right: 10px;
+    float: right;
+}
+
+h3{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+h4 {
+    text-align: center;
+    color: #fff;
+}
+
+.container-Lg{
+    background-color: azure;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 30px;
+    border-color: #444;
+}
+
+
+/*Estilos para el boton de Google*/
+.customGooSignIn {
+    display: inline-block;
+    background: #fff;
+    color: #444;
+    width: 190px;
+    height: 40px;
+    border-radius: 55px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    margin-top: 15px;
+}
+
+.Btn-Fb-SignIn{
+    display: inline-block;
+    background: #0b58f3;
+    color: #fff;
+    font-family: Helvetica;
+    width: 190px;
+    height: 40px;
+    border-radius: 55px;
+    border: thin solid rgb(46, 0, 252);
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    margin-top: 15px;
+}
+
+.Btn-Email-SignIn{
+    background-color: rgb(25, 234, 241);
+    display: inline-block;
+    color: #000;
+    font-family: Helvetica;
+    width: 190px;
+    height: 40px;
+    border-radius: 55px;
+    border: thin solid rgb(46, 0, 252);
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    margin-top: 15px;
+}
+.customGooSignIn, .Btn-Fb-SignIn, .Btn-Email-SignIn:hover {
+    cursor: pointer;
+}
+
+span.label {
+    font-family: serif;
+    font-weight: normal;
+}
+
+span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon{
+    font-size: 25px;
+}
+/*Media sreen */
+@media screen and (max-width: 800px) {
+    .imgs {
+        width: 100%;
+    }
+
+    img {
+        width: 320px;
+        height: 200px;
+    }
+
+    .forms {
+        float: none;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: auto;
+    }
+
+    .container-Fb {
+        width: 100%;
+        float: none;
+        margin: auto;
+        padding: auto;
+    }
+
+    .container-Ig {
+        float: none;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: auto;
+    }
+}

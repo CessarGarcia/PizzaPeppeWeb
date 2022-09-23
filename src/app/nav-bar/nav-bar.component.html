@@ -1,0 +1,29 @@
+<header>
+    <nav class="navbar navbar-expand-lg nav navbar-dark" id="menu">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <img class="logo" alt="Logo" src="{{imgLogo}}">
+                  
+        <div class="nav collapse navbar-collapse" id="navbarNavAltMarkup">
+            <a [routerLink]="['/Home']" [routerLinkActive]="['active']" >Inicio</a>
+            <a [routerLink]="['/About']" [routerLinkActive]="['active']" >Sobre Nosotros</a>
+            <a [routerLink]="['/Menu']" [routerLinkActive]="['active']" >Menú</a>
+            <a [routerLink]="['/UbicaTuSucursal']" [routerLinkActive]="['active']" >Ubica Tu Sucursal</a>
+            <a [routerLink]="['/LogIn']" [routerLinkActive]="['active']" class="Authentication btn font-weight-bold">Log In</a>
+            <a [routerLink]="['/SignUp']" [routerLinkActive]="['active']" class="Authentication btn font-weight-bold">Sign Up</a>
+            <a [routerLink]="['/Carrito']" [routerLinkActive]="['active']" class="btn-car btn font-weight-bold"><i class="bi bi-cart-check-fill"></i></a>
+        </div>
+    </nav>
+
+    <section class="texto-header">
+        <p class="NombreNegocio">Pizza Peppe</p>
+    </section>
+
+    <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;"></path>
+        </svg></div>
+</header>
