@@ -3,7 +3,7 @@
 <!--Slader Sing Up & Login-->
 <body>
     <div id="SeccionMenu" class="imgs container-carousel">
-        <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide " data-ride="carousel" data-interval="3500">
             <!-- <h2 class="mb-4" style="color: #ff0000" id="typewriter"> Menu</h2> -->
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -33,41 +33,25 @@
     <div class="imgs container-forms">
         <h3 class="mt-5">Bienvenido de nuevo</h3>
         <h4 class="mb-5">¿Listo para comer?</h4>
-
+        
         <div class="container-Lg">
+            <h5 class="pt-4">Inicia Sección</h5>
+
                 <!--Btn Google-->
-            <div id="gSignInWrapper" class="container-Lg">
-                <span class="label mr-2 ml-3">Log in with: </span>
-                <div id="customBtn" class="customGooSignIn">
-                <span class="icon bi bi-google ml-3" style="color: #0F9D58;"></span>
-                <span class="buttonText ">
-                    <p class="d-inline" style="color: #4285F4; ">G</p>
-                    <p class="d-inline" style="color: #DB4437;">O</p>
-                    <p class="d-inline" style="color: #F4B400">O</p>
-                    <p class="d-inline" style="color: #4285F4">G</p>
-                    <p class="d-inline" style="color: #0F9D58">L</p>
-                    <P class="d-inline" style="color: #DB4437;">E</P>
-                </span>
-                </div>
-            </div>
-
-            <!--Btn Facebook-->
-            <div id="gSignInWrapper" class="container-Lg">
-                <span class="label mr-2 ml-3">Log in with: </span>
-                <div id="customBtn" class="Btn-Fb-SignIn">
-                    <span class="icon bi bi-facebook ml-3"></span>
-                    <span class="buttonText ">Facebook</span>
-                </div>
-            </div>
-
-            <!--Btn Outlook-->
-            <div id="gSignInWrapper" class="container-Lg">
-                <span class="label mr-2 ml-3">Log in with: </span>
-                <div id="customBtn" class="Btn-Email-SignIn mb-3">
-                    <span class="icon bi bi-envelope-fill ml-3"></span>
-                    <span class="buttonText ">Email</span>
-                </div>
+            <div id="gSignInWrapper" role="button">
+                    <button class="btn btn-Go mb-3">
+                        <img [src]="googleIcon" alt="Google Logo" class="googleIcon" >
+                        <span class="buttonText ">
+                            <p class="d-inline" style="color: #4285F4; ">G</p>
+                            <p class="d-inline" style="color: #DB4437;">O</p>
+                            <p class="d-inline" style="color: #F4B400">O</p>
+                            <p class="d-inline" style="color: #4285F4">G</p>
+                            <p class="d-inline" style="color: #0F9D58">L</p>
+                            <P class="d-inline" style="color: #DB4437;">E</P>
+                        </span>
+                    </button>    
             </div>
         </div>
+        
     </div>     
 </body>

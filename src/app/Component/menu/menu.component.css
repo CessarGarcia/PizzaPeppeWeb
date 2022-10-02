@@ -1,3 +1,22 @@
+/* Diseño Del Alert Atention  */
+.alert-atention{
+    background-color: rgb(1, 255, 14);
+    height: 100px;
+    width: 900px;
+    margin: 25px auto;
+}
+strong{
+    font-weight: bold;
+    font-size: xx-large;
+    color:rgb(218, 216, 216);
+    text-shadow: 0.1em 0.1em 0.05em #333;
+}
+
+header > div{
+    font-size: 20px;
+    color: rgb(255,255,255);
+    text-shadow: 0.1em 0.1em 0.05em gray;
+}
 .menucompleto{
     background-color: #abb8c354;
 }
@@ -181,13 +200,37 @@ hr{
 }
 
 @media screen and (max-width: 800px){
+    .alert-atention{
+        width: 80%;
+        height: 110px;
+    }
+    strong{
+        font-size: x-large;
+        text-align: center;
+        margin-left: 15%;
+        text-shadow: 0.1em 0.1em 0.05em #888383;
+        color: red;
+    }
+    header > div{
+        font-size: small;
+        text-align: justify;
+        text-shadow: none;
+        color: #000;
+        padding-left: 10%;
+    }
+    b{
+        text-shadow: 0.1em 0.1em 0.05em #888383;
+        color: red;
+        font-size: 15px;
+    }
+
     img{
         width: 300px;
         height: 200px;
     }
     .menuItems{
         width: auto;
-        height: 400px;
+        height: 500px;
     }
     .menuImg{
         width: auto;
@@ -198,6 +241,7 @@ hr{
     }
     .btn-card{
         padding: 0 auto;
+        margin-top: -15px;
     }
     .menuItems-Refrescos{
         width: auto;
@@ -212,11 +256,16 @@ hr{
     }
     .w-300{
         width: 300px;
-        height: 450px;
     }
     .h-auto{
+        height: 600px;
+    }
+    
+    .desing-flex{
         height: auto;
-        width: 400px !important;
+    }
+    .flex{
+        height: 1000px;
     }
 }
 

@@ -16,6 +16,7 @@ import { SingUpComponent } from './Authentication/sing-up/sing-up.component';
 import { LogoutComponent } from './Authentication/logout/logout.component';
 import { Error404Component } from './error404/error404.component';
 import { PaycardComponent } from './paycard/paycard.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 const routes: Routes = [
   { path: 'About', component: SobreNosotrosComponent },
@@ -43,7 +44,8 @@ const routes: Routes = [
     SingUpComponent,
     LogoutComponent,
     Error404Component,
-    PaycardComponent
+    PaycardComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
