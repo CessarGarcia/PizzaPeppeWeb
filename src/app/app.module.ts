@@ -1,8 +1,14 @@
+//Modulos
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { AppRoutingModule } from './app-routing.module';
+// import {AngularFireModule} from '@angular/fire/compat';
 
 //Componentes 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -17,23 +23,13 @@ import { LogoutComponent } from './Authentication/logout/logout.component';
 import { Error404Component } from './error404/error404.component';
 import { PaycardComponent } from './paycard/paycard.component';
 import { SpinnerComponent } from './spinner/spinner.component';
-
-const routes: Routes = [
-  { path: 'About', component: SobreNosotrosComponent },
-  { path: 'Menu', component: MenuComponent },
-  { path: 'UbicaTuSucursal', component: UbicaTuSucursalComponent },
-  { path: 'Home', component: InicioComponent },
-  {path: 'LogIn', component: LoginComponent},
-  {path: 'SignUp', component: SingUpComponent},
-  {path: 'Carrito', component: PaycardComponent},
-
- //Wild Card Route for 404 request
-  { path: '**', pathMatch: 'full', component: Error404Component }
-];
+import { RecoveryPasswordComponent } from './Authentication/recovery-password/recovery-password.component';
+import { VerificarCorreoComponent } from './Authentication/verificar-correo/verificar-correo.component';
 
 
 @NgModule({
-  declarations: [AppComponent,
+  declarations: [
+    AppComponent,
     NavBarComponent, 
     FooterComponent, 
     InicioComponent, 
@@ -45,12 +41,20 @@ const routes: Routes = [
     LogoutComponent,
     Error404Component,
     PaycardComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    RecoveryPasswordComponent,
+    VerificarCorreoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
+    ReactiveFormsModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    // RouterModule.forRoot(routes),
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

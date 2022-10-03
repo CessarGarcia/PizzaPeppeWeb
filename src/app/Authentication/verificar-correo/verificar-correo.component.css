@@ -1,0 +1,52 @@
+body {
+    background: url("https://bit.ly/3S8y1gi") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Roboto";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 500px;
+    padding-top: 80px;
+    padding-bottom: 500px;
+}
+
+.body{
+    border: solid rgb(104, 86, 86);
+}
+
+img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+
+h1{
+    color:black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+/* Styles for button */
+.btn-sky{
+    background-color: rgba(0, 110, 255, 0.795);
+    color: #fff;
+}
+.btn-sky:hover{
+    background-color: rgba(0,110,255);
+    color: #fff;
+}
+.w-200{
+    width: 200px;
+}
+
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 20px;
+    }
+}

@@ -7,6 +7,7 @@ body {
     font-family: "Roboto";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 1170px;
 }
 
 .imgs {
@@ -17,21 +18,22 @@ body {
 }
 
 .container-carousel {
-    width: 37%;
+    width: 45%;
+    height: auto;
     background-color: rgb(60, 177, 255);
-    margin-left: 10px;
-    margin-bottom: 25px;
+    margin-left: 35px;
     display: inline-block;
+    margin-top: 340px;
 }
 
 img {
     opacity: 100% !important;
     position: sticky;
-    z-index: -1;
+    z-index: -1px;
     height: 300px;
     width: 450px;
-    margin-top: 55px;
-    margin-left: 5px;
+    margin: auto;
+    margin-bottom: 35px;
 }
 
 /*Estilos para forms*/
@@ -39,7 +41,11 @@ img {
     width: 48%;
     background-color: rgb(255, 60, 245);
     margin-right: 10px;
+    margin-top: 65px;
+    padding-bottom: 40px;
     float: right;
+    opacity: 75%;
+    height: auto;
 }
 
 h3{
@@ -52,16 +58,38 @@ h4 {
     color: #fff;
 }
 
+h5{
+    text-align: center;
+    color: red;
+    font-size: 25px;
+    font-family: serif;
+    font-weight: bold;
+}
+
 .container-Lg{
     background-color: azure;
-    width: 350px;
+    width: 400px;
+    padding: 15px;
     margin: 0 auto;
-    margin-top: 15px;
     border-radius: 30px;
     border-color: #444;
 }
 
+.container-Datos{
+    margin-bottom: 16px;
+    width: 100%;
+    padding-left: 30px;
+}
+.container-Datos>.Apellido{
+    padding-right: 20px;
+}
 
+.Nombre, .Apellido{
+    width: 45%;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin: 5px;
+}
 /*Estilos para el boton de Google*/
 .customGooSignIn {
     display: inline-block;
@@ -74,37 +102,23 @@ h4 {
     box-shadow: 1px 1px 1px grey;
     white-space: nowrap;
     margin-top: 15px;
+    margin-left: 25%;
 }
 
-.Btn-Fb-SignIn{
-    display: inline-block;
-    background: #0b58f3;
-    color: #fff;
-    font-family: Helvetica;
-    width: 190px;
-    height: 40px;
-    border-radius: 55px;
-    border: thin solid rgb(46, 0, 252);
-    box-shadow: 1px 1px 1px grey;
-    white-space: nowrap;
-    margin-top: 15px;
-}
-
-.Btn-Email-SignIn{
-    background-color: rgb(25, 234, 241);
-    display: inline-block;
-    color: #000;
-    font-family: Helvetica;
-    width: 190px;
-    height: 40px;
-    border-radius: 55px;
-    border: thin solid rgb(46, 0, 252);
-    box-shadow: 1px 1px 1px grey;
-    white-space: nowrap;
-    margin-top: 15px;
-}
-.customGooSignIn, .Btn-Fb-SignIn, .Btn-Email-SignIn:hover {
+.customGooSignIn:hover {
     cursor: pointer;
+}
+.googleIcon{
+    height: 30px;
+    width: 30px;
+    margin-top: 2px;
+}
+.btn-Go{
+    margin: 0 auto;
+    margin-left: 25%;
+    border-color: #444;
+    border-radius: 20px;
+    height: 50px;
 }
 
 span.label {
@@ -115,48 +129,68 @@ span.label {
 span.buttonText {
     display: inline-block;
     vertical-align: middle;
-    padding-left: 42px;
-    padding-right: 42px;
-    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -43px;
+    font-size: 20px;
     font-weight: bold;
-    /* Use the Roboto font that is loaded in the <head> */
     font-family: 'Roboto', sans-serif;
 }
-
-.icon{
-    font-size: 25px;
+/* Styles by button */
+.w-300{ 
+    width: 300px;
+    margin: 0 auto;
 }
+.btn-sky{
+    background-color: rgba(0, 110, 255, 0.795);
+    color: #fff;
+    margin-left: 25%;
+}
+
+.btn-sky:hover{
+    background-color: rgba(0,110,255);
+    color: #fff;
+}
+.w-200{
+    width: 200px;
+}
+.link:hover{
+    cursor: pointer;
+}
+
 /*Media sreen */
 @media screen and (max-width: 800px) {
+    body{
+        height: 1600px;
+    }
     .imgs {
-        width: 100%;
+        width: auto;
+        margin: 0 auto;
     }
 
     img {
         width: 320px;
         height: 200px;
     }
-
-    .forms {
-        float: none;
-        width: 100%;
-        margin: auto;
-        margin-bottom: 20px;
-        padding: auto;
+    .container-carousel{
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+    .container-forms{
+        margin: 30px auto;
+    }
+    .container-Lg{
+        width: 90%;
+    }
+    h3{
+        font-size: 30px;
+        margin: 5px;
+    }
+    h4{
+        font-size: 20px;
     }
 
-    .container-Fb {
-        width: 100%;
-        float: none;
-        margin: auto;
-        padding: auto;
-    }
-
-    .container-Ig {
-        float: none;
-        width: 100%;
-        margin: auto;
-        margin-bottom: 20px;
-        padding: auto;
+    .pr{
+        font-size: 15px;
     }
 }

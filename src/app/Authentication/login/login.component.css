@@ -7,6 +7,7 @@ body {
     font-family: "Roboto";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 900px;
 }
 
 .imgs {
@@ -18,10 +19,11 @@ body {
 
 .container-carousel {
     width: 45%;
+    height: auto;
     background-color: rgb(60, 177, 255);
-    margin-left: 10px;
-    margin-bottom: 25px;
+    margin-left: 35px;
     display: inline-block;
+    margin-top: 340px;
 }
 
 img {
@@ -38,30 +40,35 @@ img {
     width: 48%;
     background-color: rgb(255, 60, 245);
     margin-right: 10px;
+    margin-top: 40px;
+    padding-bottom: 40px;
     float: right;
     opacity: 75%;
+    height: auto;
 }
 
-h3{
+h3 {
     text-align: center;
     color: #fff;
     font-size: 50px;
 }
+
 h4 {
     text-align: center;
     color: #fff;
 }
 
-h5{
+h5 {
     text-align: center;
     color: #000;
     font-size: 35px;
     font-family: serif;
 }
 
-.container-Lg{
+.container-Lg {
     background-color: azure;
-    width: 350px;
+    width: 400px;
+    padding: 15px;
     margin: 0 auto;
     border-radius: 30px;
     border-color: #444;
@@ -86,12 +93,14 @@ h5{
 .customGooSignIn:hover {
     cursor: pointer;
 }
-.googleIcon{
+
+.googleIcon {
     height: 30px;
     width: 30px;
     margin-top: 2px;
 }
-.btn-Go{
+
+.btn-Go {
     margin: 0 auto;
     margin-left: 25%;
     border-color: #444;
@@ -115,10 +124,35 @@ span.buttonText {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Styles by button */
+.w-300 {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.btn-sky {
+    background-color: rgba(0, 110, 255, 0.795);
+    color: #fff;
+    margin-left: 25%;
+}
+
+.btn-sky:hover {
+    background-color: rgba(0, 110, 255);
+    color: #fff;
+}
+
+.w-200 {
+    width: 200px;
+}
+
 /*Media sreen */
 @media screen and (max-width: 800px) {
+    body{
+        height: 1400px;
+    }
     .imgs {
-        width: 100%;
+        width: auto;
+        margin: 0 auto;
     }
 
     img {
@@ -126,26 +160,25 @@ span.buttonText {
         height: 200px;
     }
 
-    .forms {
-        float: none;
-        width: 100%;
-        margin: auto;
-        margin-bottom: 20px;
-        padding: auto;
+    .container-Lg{
+        width: 90%;
+    }
+    h3{
+        font-size: 30px;
+        margin: 5px;
+    }
+    h4{
+        font-size: 20px;
     }
 
-    .container-Fb {
-        width: 100%;
-        float: none;
-        margin: auto;
-        padding: auto;
+    .container-carousel{
+        margin-top: 90px;
+        margin-bottom: 90px;
     }
-
-    .container-Ig {
-        float: none;
+    .container-forms {
         width: 100%;
-        margin: auto;
-        margin-bottom: 20px;
-        padding: auto;
+    }
+   .pr{
+        font-size: 15px;
     }
 }

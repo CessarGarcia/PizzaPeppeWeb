@@ -1,7 +1,6 @@
-<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/api:client.js"></script>
 <!--Slader Sing Up & Login-->
-<body>
+
+<body *ngIf="!loading">
     <div id="SeccionMenu" class="imgs container-carousel">
         <div id="carouselExampleControls" class="carousel slide " data-ride="carousel" data-interval="3500">
             <!-- <h2 class="mb-4" style="color: #ff0000" id="typewriter"> Menu</h2> -->
@@ -10,7 +9,7 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            
+
             <div class="carousel-inner container">
                 <!-- Primer Banner Pizza Vegetariana-->
                 <div class="carousel-item active">
@@ -27,20 +26,37 @@
             </div>
         </div>
     </div>
-<!--Slader Fin-->
-    
+    <!--Slader Fin-->
+
     <!--Forms de Login-->
     <div class="imgs container-forms">
         <h3 class="mt-5">Bienvenido de nuevo</h3>
         <h4 class="mb-5">¿Listo para comer?</h4>
-        
-        <div class="container-Lg">
-            <h5 class="pt-4">Inicia Sección</h5>
 
+        <div class="container-Lg">
+            <h5 class="pt-4">Iniciar Sección</h5>
+            <form (ngSubmit)="login()">
+                <hr>
+                <div class="form-floating mb-3 w-300">
+                    <input type="email" class="form-control" placeholder="name@example.com">
+                    <label>Correo Electrónico </label>
+                </div>
+
+                <!-- <div class="form-floating mb-3 w-300">
+                    <input type="text" class="form-control" placeholder="NickName">
+                    <label>Nombre de Usuario </label>
+                </div> -->
+
+                <div class="form-floating mb-3 w-300">
+                    <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+                    <label>Contraseña</label>
+                </div>
+                <hr>
                 <!--Btn Google-->
-            <div id="gSignInWrapper" role="button">
+                <div id="gSignInWrapper" role="button">
+                    <p class="text-center h5 font-weight-bold text-danger">Inicia Seccion con Google</p>
                     <button class="btn btn-Go mb-3">
-                        <img [src]="googleIcon" alt="Google Logo" class="googleIcon" >
+                        <img [src]="googleIcon" alt="Google Logo" class="googleIcon">
                         <span class="buttonText ">
                             <p class="d-inline" style="color: #4285F4; ">G</p>
                             <p class="d-inline" style="color: #DB4437;">O</p>
@@ -49,9 +65,19 @@
                             <p class="d-inline" style="color: #0F9D58">L</p>
                             <P class="d-inline" style="color: #DB4437;">E</P>
                         </span>
-                    </button>    
-            </div>
+                    </button>
+                </div>
+                <hr>
+
+                <button type="submit" class="btn btn-sky btn-lg mb-3 w-200">Ingresar</button>
+                <p class="font-weight-bold pr text-center">¿No tienes cuenta? <a routerLink="/SignUp">Registrar</a></p>
+                <p class="font-weight-bold pr text-center">¿No recuerdas tu contraseña? <a
+                        routerLink="/RecoveryPassword"> <br> Recuperar Contraseña</a></p>
+            </form>
+
+
+
         </div>
-        
-    </div>     
+
+    </div>
 </body>
