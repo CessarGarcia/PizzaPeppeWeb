@@ -43,7 +43,7 @@ header {
 .logo{
 	float:left;
 	margin-right: 2%;
-    width: 70px;
+    width: 100px;
     border-radius: 50%;
 }
 .toggleMenu {
@@ -110,6 +110,6 @@ header .textos-header {
     }
 
     header{
-        height: 400px;
+        height: 480px;
     }
 }

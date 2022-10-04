@@ -80,6 +80,11 @@ h5{
     width: 100%;
     padding-left: 30px;
 }
+span > img{
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
 .container-Datos>.Apellido{
     padding-right: 20px;
 }

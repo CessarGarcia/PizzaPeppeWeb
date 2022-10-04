@@ -144,7 +144,11 @@ span.buttonText {
 .w-200 {
     width: 200px;
 }
-
+.errorIcon{
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
 /*Media sreen */
 @media screen and (max-width: 800px) {
     body{

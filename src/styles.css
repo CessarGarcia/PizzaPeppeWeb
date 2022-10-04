@@ -6,6 +6,11 @@
     margin: 0 auto;
     background-color: rgb(147, 209, 233);
 }
+.errorIcon{
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
 
 @media screen and (max-width: 800px) {
     .wrapper{

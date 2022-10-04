@@ -1,0 +1,116 @@
+<body *ngIf="!loading">
+    <div id="SeccionMenu" class="imgs container-carousel">
+        <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+            <!-- <h2 class="mb-4" style="color: #ff0000" id="typewriter"> Menu</h2> -->
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            
+            <div class="carousel-inner container pt-5">
+                <!-- Primer Banner Pizza Vegetariana-->
+                <div class="carousel-item active">
+                    <img class="d-block height" [src]="Pizza1" alt="Banner Pizza Vegetariana">
+                </div>
+                <!-- Segundo Banner  Boneless -->
+                <div class="carousel-item ">
+                    <img class="d-block height " [src]="Boneless" alt="Banner Boneless">
+                </div>
+                <!-- Tercero Banner  Complementos -->
+                <div class="carousel-item ">
+                    <img class="d-block height " [src]="Complementos" alt="Ba nner Complementos">
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Slader Fin-->
+
+     <!--Forms de Login-->
+     <div class="imgs container-forms">
+        <h3 class="mt-5">Bienvenido a Pizza Peppe</h3>
+        <h4 class="mb-5">Registrate Queremos Conocerte</h4>
+    
+        <div class="container-Lg">
+            <h5 class="pt-4">Registrate con tus datos</h5>
+            <form (ngSubmit)="registrar()" [formGroup]="registrarUsuario">
+            <!-- email, usuario, nombre, apellido, password repetirPassword -->
+                <hr>
+                <div class="form-floating mb-3 w-300">
+                    <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+                    <label>Correo Electrónico *</label>
+                    <span *ngIf="registrarUsuario.get('email')?.hasError('required') && registrarUsuario.get('email')?.touched" class="text-danger errorLabel">
+                        <img [src]="errorIcon">
+                        El <strong>Correo</strong> es requerido
+                    </span>
+                    <span *ngIf="registrarUsuario.get('email')?.hasError('email') && registrarUsuario.get('email')?.touched" class="text-danger errorLabel">
+                        <img [src]="errorIcon">
+                        El dominio del <strong>Correo</strong> es invalido
+                    </span>
+                </div>
+    
+                <div class="form-floating mb-3 w-300">
+                    <input type="text" class="form-control" formControlName="usuario" placeholder="Nombre Usuario" [(ngModel)]="usuario" required>
+                    <label>Nombre de Usuario </label>
+                </div>
+                <div class="container-Datos">
+                    <div class="Nombre form-floating ">
+                        <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre" [(ngModel)]="nombre" required>
+                    <label>Nombre </label>
+                    </div>
+                    <div class="Apellido form-floating">
+                        <input type="text" class="form-control" formControlName="apellido" placeholder="Apellido" [(ngModel)]="apellido" required>
+                    <label>Apellido </label>
+                    </div>
+                </div>
+                
+                <div class="form-floating mb-3 w-300">
+                    <input type="password" class="form-control" formControlName="password" placeholder="Password" id="exampleInputPassword1">
+                    <label>Contraseña *</label>
+                    <span *ngIf="registrarUsuario.get('password')?.hasError('required') && registrarUsuario.get('password')?.touched" class="text-danger errorLabel">
+                        <img [src]="errorIcon">
+                        La <strong>password</strong> es requerida
+                    </span>
+                    <span *ngIf="registrarUsuario.get('password')?.hasError('minlength') && registrarUsuario.get('password')?.touched" class="text-danger errorLabel">
+                        <img [src]="errorIcon">
+                        La <strong>Contraseña</strong> debe tener como minimo 6 caracteres
+                    </span>
+                </div>
+    
+                <div class="form-floating mb-3 w-300">
+                    <input type="password" class="form-control" formControlName="repetirPassword" placeholder="Password" id="exampleInputPassword1">
+                    <label>Confirmar Contraseña *</label>
+                    <span *ngIf="registrarUsuario.get('repetirPassword')?.hasError('required') && registrarUsuario.get('repetirPassword')?.touched" class="text-danger errorLabel">
+                        <img [src]="errorIcon">
+                        La <strong>Contraseña</strong> es requerida
+                    </span>
+                    <span *ngIf="registrarUsuario.get('repetirPassword')?.hasError('minlength') && registrarUsuario.get('repetirPassword')?.touched" class="text-danger errorLabel">
+                        <img [src]="errorIcon">
+                        La <strong>Contraseña</strong> debe tener como minimo 6 caracteres
+                    </span>
+                </div>
+                <hr>
+               <!--Btn Google-->
+               <div id="gSignInWrapper" role="button">
+                <p class="text-center h5 font-weight-bold text-danger">Registrate con Google</p>
+                <button class="btn btn-Go mb-3" (click)="googleAuth()">
+                    <img [src]="googleIcon" class="googleIcon">
+                    <span class="buttonText ">
+                        <p class="d-inline" style="color: #4285F4; ">G</p>
+                        <p class="d-inline" style="color: #DB4437;">O</p>
+                        <p class="d-inline" style="color: #F4B400">O</p>
+                        <p class="d-inline" style="color: #4285F4">G</p>
+                        <p class="d-inline" style="color: #0F9D58">L</p>
+                        <P class="d-inline" style="color: #DB4437;">E</P>
+                    </span>
+                    <app-spinner *ngIf="loading"></app-spinner>
+                </button>
+            </div>
+                <hr>
+                <button type="submit" [disabled]="registrarUsuario.invalid" class="btn btn-sky btn-lg mb-3 w-200">Registrate</button>
+                <p class="font-weight-bold pr text-center">¿Ya tienes cuenta? <a routerLink="/LogIn" class="link">Inicia Sección</a></p>       
+                
+            </form>
+        </div>
+        </div>
+</body>
