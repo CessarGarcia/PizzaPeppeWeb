@@ -9,7 +9,19 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./menu-private.component.css']
 })
 export class MenuPrivateComponent implements OnInit {
+  dataUser: any;
+  loading: boolean = false;
+  total: number = 0;
 
+  Productos:Array<any> =[
+    {
+      "id": 1,
+      "menu": 'Pizza',
+    }, 
+
+  ];
+
+  
       /*******************************
       *      MENU 1. DE PIZZAS       *
       *******************************/
@@ -29,8 +41,6 @@ export class MenuPrivateComponent implements OnInit {
     CPESuprema: "https://i.ibb.co/kQsdtDM/1c-Pizza-Especialidad-Suprema.jpg",
     CPETropical: "https://i.ibb.co/T8jxktt/1c-Pizza-Especialidad-Tropical.jpg",
   };
-  
-
             /*******************************
            *      MENU 2.   REFRESCOS     *
           *******************************/
@@ -42,8 +52,7 @@ export class MenuPrivateComponent implements OnInit {
         AguaCiel: "https://th.bing.com/th/id/OIP.kJoBh_Eof1qImfLPFqXSlgHaHa?pid=ImgDet&rs=1",
         FuzeTea: "https://th.bing.com/th/id/OIP.njGq57uaFSHVEBNXmReF3QHaIc?pid=ImgDet&rs=1",
         JugosDelValle: "https://th.bing.com/th/id/OIP.kFdV7nZqlDti5d5PhlHSPgHaIz?pid=ImgDet&rs=1",
-  };
-        
+  };        
             /*******************************
            *      MENU 3.   COMBOS        *
           *******************************/
@@ -81,26 +90,27 @@ complementos = {
       {Id: "Combo 7", Precio: "$299", Descripcion: "2 Pizzas Familiares (De 1 Igrediente), una orden de alitas y Coca Cola 2 Lts"}
     ];
 
-    dataUser: any;
-    loading: boolean = false;
-    
     constructor(private afAuth: AngularFireAuth,
                 private routes: Router,
                 private toastr: ToastrService) { }
   
     ngOnInit(): void {   
       /* Se puede comentar esta parte del codigo para que el inicio de seccion no sea requerido */
-      this.afAuth.currentUser.then(user => {
-        if(user && user.emailVerified){
-          this.dataUser = user;
-        }else{
-          this.routes.navigate(['/LogIn']);
-          this.toastr.error('Favor de registrar una cuenta', 'Error');
-        }
-      })
+      // this.afAuth.currentUser.then(user => {
+      //   if(user && user.emailVerified){
+      //     this.dataUser = user;
+      //   }else{
+      //     this.routes.navigate(['/LogIn']);
+      //     this.toastr.error('Favor de registrar una cuenta', 'Error');
+      //   }
+      // })
     }
   
     logOut(){
       this.afAuth.signOut().then(() => this.routes.navigate(['/LogIn']));
+    }
+
+    addCart(){
+      this.toastr.success('El producto ha sido añadido correctamente al carrito', 'Producto Agregado')
     }
 }

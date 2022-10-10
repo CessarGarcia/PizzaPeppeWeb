@@ -1,0 +1,21 @@
+.DataUsers{
+    background-color: aqua;
+    height: 500px;
+    padding-top: 15px;
+}
+.w-300{
+    width: 300px;
+    margin: 0 auto;
+}
+.w-200{
+    width: 200px;
+}
+
+.btn-sky{
+    background-color: rgba(0, 110, 255, 0.795);
+    color: #fff;
+}
+.btn-sky:hover{
+    background-color: rgba(0,110,255);
+    color: #fff;
+}

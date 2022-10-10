@@ -1,3 +1,30 @@
 <div class="container">
-    <p>perfil works!</p>
+    <div class="DataUsers mb-3">
+        <h1>Datos Personales</h1>
+
+        <div class="form-floating mb-3 w-300">
+            <input type="text" class="form-control" formControlName="usuario" placeholder="Nombre Usuario" [(ngModel)]="usuario" required>
+            <label>Nombre de Usuario </label>
+        </div>
+
+        <div class="form-floating mb-3 w-300">
+            <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre" [(ngModel)]="nombre" required>
+            <label>Nombre </label>
+        </div>
+
+        <div class="form-floating mb-3 w-300">
+           <input type="text" class="form-control" formControlName="apellido" placeholder="apellido" [(ngModel)]="apellido" required>
+          <label>Apellido </label>
+        </div>
+        <form (ngSubmit)="recovery()" [formGroup]="ChangePassword">
+            <div class="form-floating mb-3 w-300">
+                <p>¿Necesitas cambiar la contraseña?</p>
+                <button type="submit" class="btn btn-sky btn-lg mb-3 w-200">Recuperar</button>
+             </div>
+        </form>
+    </div>
+
+    <div class="direccion">
+        <h2>Por favor ingrese la <strong>Dirección</strong> a donde se le enviara sus pedidos </h2>
+    </div>
 </div>

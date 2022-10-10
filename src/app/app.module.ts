@@ -28,6 +28,7 @@ import { RegistrarUsuarioComponent } from './Authentication/registrar-usuario/re
 import { PerfilComponent } from './Authentication/perfil/perfil.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
