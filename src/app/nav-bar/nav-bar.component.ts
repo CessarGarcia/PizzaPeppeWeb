@@ -7,4 +7,7 @@ import { Component,  } from '@angular/core';
 })
 export class NavBarComponent {
   imgLogo = 'https://i.ibb.co/BCJTQNB/Logo.png';
+  islogin : boolean = false;
+
+  // islogin(){}
 }

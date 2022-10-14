@@ -64,9 +64,9 @@
                 </div>
                 <hr>
                 <!--Btn Google-->
-                <div id="gSignInWrapper" role="button">
+                <div class="form-group">
                     <p class="text-center h5 font-weight-bold text-danger">Inicia Seccion con Google</p>
-                    <button class="btn btn-Go mb-3">
+                    <button (click)="signInWithGoogle()" class="btn btn-Go mb-3">
                         <img [src]="googleIcon" alt="Google Logo" class="googleIcon">
                         <span class="buttonText ">
                             <p class="d-inline" style="color: #4285F4; ">G</p>

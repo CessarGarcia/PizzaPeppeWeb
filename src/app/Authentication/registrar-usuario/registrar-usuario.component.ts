@@ -42,14 +42,15 @@ repetirPassword: ['', [Validators.required, Validators.minLength(6)]],
   }
 
   //Auth con Google
-googleAuth(){
+signInWithGoogle(){
   return this.authLogin(new GoogleAuthProvider())
 }
 
 authLogin(provider: any){
-  return this.afAuth.signInWithPopup(provider).then(result => {
+  return this.afAuth.signInWithPopup(provider).then(res => {
     this.toastr.success('Se ha ingresado correctamente', 'Login Correcto');
     this.routes.navigate(['/MenuWithLogin']);
+    localStorage.setItem('token',JSON.stringify(res.user?.uid));
   }).catch((error)=> {
     this.toastr.error(this.authErrorService.firebaseError(error.code), 'Error');
   })
@@ -74,6 +75,7 @@ registrar(){
     /* Creación de usuarios por Email y contraseña */
   this.afAuth.createUserWithEmailAndPassword(email, password).then(() => {
     this.verificarCorreo();
+    localStorage.setItem(email, password);
   }).catch((error) => {
     this.loading = false;
     console.log(error);

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from '@angular/router';
+import {canActivate, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
 
 //Componentes 
 // import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -19,7 +20,7 @@ import { MenuPrivateComponent } from './component/menu-private/menu-private.comp
 import { PerfilComponent } from './Authentication/perfil/perfil.component';
 
 const routes: Routes = [
-    {path: '', redirectTo: 'Home', pathMatch: 'full'},
+    {path: '', redirectTo: '/Home', pathMatch: 'full'},
     { path: 'About', component: SobreNosotrosComponent },
     { path: 'Menu', component: MenuComponent },
     { path: 'UbicaTuSucursal', component: UbicaTuSucursalComponent },

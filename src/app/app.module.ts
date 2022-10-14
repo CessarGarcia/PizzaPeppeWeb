@@ -27,8 +27,6 @@ import { environment } from 'src/environments/environment';
 import { RegistrarUsuarioComponent } from './Authentication/registrar-usuario/registrar-usuario.component';
 import { PerfilComponent } from './Authentication/perfil/perfil.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -6,7 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-menu-private',
   templateUrl: './menu-private.component.html',
-  styleUrls: ['./menu-private.component.css']
+  styleUrls: ['./menu-private.component.scss']
 })
 export class MenuPrivateComponent implements OnInit {
   dataUser: any;
@@ -96,14 +96,14 @@ complementos = {
   
     ngOnInit(): void {   
       /* Se puede comentar esta parte del codigo para que el inicio de seccion no sea requerido */
-      // this.afAuth.currentUser.then(user => {
-      //   if(user && user.emailVerified){
-      //     this.dataUser = user;
-      //   }else{
-      //     this.routes.navigate(['/LogIn']);
-      //     this.toastr.error('Favor de registrar una cuenta', 'Error');
-      //   }
-      // })
+      this.afAuth.currentUser.then(user => {
+        if(user && user.emailVerified){
+          this.dataUser = user;
+        }else{
+          this.routes.navigate(['/LogIn']);
+          this.toastr.error('Favor de registrar una cuenta', 'Error');
+        }
+      })
     }
   
     logOut(){
