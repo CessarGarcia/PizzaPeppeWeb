@@ -96,6 +96,10 @@ complementos = {
   
     ngOnInit(): void {   
       /* Se puede comentar esta parte del codigo para que el inicio de seccion no sea requerido */
+      this.islogin();
+    }
+    
+    islogin(){
       this.afAuth.currentUser.then(user => {
         if(user && user.emailVerified){
           this.dataUser = user;
@@ -105,7 +109,7 @@ complementos = {
         }
       })
     }
-  
+
     logOut(){
       this.afAuth.signOut().then(() => this.routes.navigate(['/LogIn']));
     }

@@ -1,14 +1,17 @@
 //Modulos
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
+
 import {AngularFireModule} from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 //Componentes 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -23,9 +26,7 @@ import { PaycardComponent } from './paycard/paycard.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { RecoveryPasswordComponent } from './Authentication/recovery-password/recovery-password.component';
 import { VerificarCorreoComponent } from './Authentication/verificar-correo/verificar-correo.component';
-import { environment } from 'src/environments/environment';
 import { RegistrarUsuarioComponent } from './Authentication/registrar-usuario/registrar-usuario.component';
-import { PerfilComponent } from './Authentication/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,6 @@ import { PerfilComponent } from './Authentication/perfil/perfil.component';
     RecoveryPasswordComponent,
     VerificarCorreoComponent,
     RegistrarUsuarioComponent,
-    PerfilComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +51,8 @@ import { PerfilComponent } from './Authentication/perfil/perfil.component';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     CommonModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added

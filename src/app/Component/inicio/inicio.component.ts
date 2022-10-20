@@ -15,7 +15,7 @@ export class InicioComponent implements OnInit {
   Aderezos = "https://i.ibb.co/VvPsq3F/6-Aderezos.png";
   Pollo = "https://i.ibb.co/gDDT7xx/7-Pollo.png";
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }

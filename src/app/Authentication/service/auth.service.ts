@@ -19,6 +19,9 @@ export class AuthService{
         return this.fireauth.signInWithPopup(new GoogleAuthProvider).then(res =>{
             this.router.navigate(['/MenuWithLogin']);
             localStorage.setItem('token', JSON.stringify(res.user?.uid));
+            if(localStorage.getItem("token") != null){
+                return JSON.parse(localStorage.getItem("token")!);
+              }
         }, error => {
             this.toastr.error(this.authErrorService.firebaseError(error.code), 'Error');
         })

@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthErrorService } from 'src/app/services/auth-error.service';
+import { CloudFirestoreService } from 'src/app/services/cloud-firestore.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -23,12 +24,14 @@ export class LoginComponent implements OnInit {
   
   loginUsuario : FormGroup;
   loading: boolean = false;
-  
+  showButtonLog: boolean = true;
+
   constructor(private fb: FormBuilder,
     private afAuth: AngularFireAuth,
     private toastr: ToastrService,
     private routes: Router,
     private authErrorService: AuthErrorService,
+    public FirestoreCloud : CloudFirestoreService,
     private auth: AuthService){ 
       this.loginUsuario = this.fb.group({
         email: ['', [Validators.required, Validators.email]],
@@ -47,6 +50,7 @@ export class LoginComponent implements OnInit {
     this.afAuth.signInWithEmailAndPassword(email, password).then((user)=>{
       console.log(user);
       if(user.user?.emailVerified){
+        localStorage.setItem('token', JSON.stringify(this.afAuth.user));
         this.routes.navigate(['/MenuWithLogin'])
       }else{
         this.routes.navigate(['/VerificarCorreo'])
@@ -54,10 +58,18 @@ export class LoginComponent implements OnInit {
     }).catch((error)=>{
       this.loading = false;
       this.toastr.error(this.authErrorService.firebaseError(error.code), 'Error');
-    }) 
+    })
+    if(this.afAuth.user){
+      this.showButtonLog = false; //Ya hizo el registro y no se mostrará el btn
+    }else{
+      this.showButtonLog= true; //El user aun no se registra, se mostrará el btn
+    }
   }
 
   signInWithGoogle(){
     this.auth.googleSignIn();
+    if(localStorage.getItem("token") != null){
+      return JSON.parse(localStorage.getItem("token")!);
+    }
   }
 }

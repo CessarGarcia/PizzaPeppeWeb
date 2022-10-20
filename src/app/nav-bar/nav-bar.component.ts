@@ -1,4 +1,5 @@
 import { Component,  } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-NavBar',
@@ -7,7 +8,22 @@ import { Component,  } from '@angular/core';
 })
 export class NavBarComponent {
   imgLogo = 'https://i.ibb.co/BCJTQNB/Logo.png';
-  islogin : boolean = false;
+  showButtonLog : boolean = false;
 
-  // islogin(){}
+  constructor(private afAuth: AngularFireAuth){}
+
+  ngOnInit(): void {
+    this.islogin();
+  }
+
+  islogin(){
+    if(this.afAuth.user){
+      if(localStorage.getItem("token") != null){
+        return JSON.parse(localStorage.getItem("token")!);
+      }
+      this.showButtonLog = false; //Ya hizo el registro y no se mostrará el btn
+    }else{
+      this.showButtonLog= true; //El user aun no se registra, se mostrará el btn
+    }
+  }
 }

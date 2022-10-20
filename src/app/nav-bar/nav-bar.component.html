@@ -11,8 +11,8 @@
             <a [routerLink]="['/About']" [routerLinkActive]="['active']" >Sobre Nosotros</a>
             <a [routerLink]="['/Menu']" [routerLinkActive]="['active']" >Menú</a>
             <a [routerLink]="['/UbicaTuSucursal']" [routerLinkActive]="['active']" >Ubica Tu Sucursal</a>
-            <a [routerLink]="['/LogIn']" [routerLinkActive]="['active']" class="Authentication btn font-weight-bold" *ngIf="islogin">Iniciar Sección</a>
-            <a [routerLink]="['/Registrate']" [routerLinkActive]="['active']" class="Authentication btn font-weight-bold" *ngIf="islogin">Registrate</a>
+            <a [routerLink]="['/LogIn']" [routerLinkActive]="['active']" class="Authentication btn font-weight-bold" *ngIf="!showButtonLog">Iniciar Sección</a>
+            <a [routerLink]="['/Registrate']" [routerLinkActive]="['active']" class="Authentication btn font-weight-bold" *ngIf="!showButtonLog">Registrate</a>
             <a [routerLink]="['/Carrito']" [routerLinkActive]="['active']" class="btn-car btn font-weight-bold"><i class="bi bi-cart-check-fill"></i></a>
         </div>
     </nav>
