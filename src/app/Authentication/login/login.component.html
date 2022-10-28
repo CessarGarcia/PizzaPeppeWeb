@@ -62,11 +62,13 @@
                         La <strong>Contraseña</strong> debe tener como minimo 6 caracteres
                     </span>
                 </div>
+                
+                <button type="submit" [disabled]="loginUsuario.invalid" class="btn btn-sky btn-lg mb-3 w-200">Ingresar</button>
                 <hr>
                 <!--Btn Google-->
                 <div class="form-group">
                     <p class="text-center h5 font-weight-bold text-danger">Inicia Seccion con Google</p>
-                    <button (click)="signInWithGoogle()" class="btn btn-Go mb-3">
+                    <button (click)="signInWithGoogle()" class="btn btn-Go mb-3" [disabled]="loginUsuario.get('email')?.touched">
                         <img [src]="googleIcon" alt="Google Logo" class="googleIcon">
                         <span class="buttonText ">
                             <p class="d-inline" style="color: #4285F4; ">G</p>
@@ -80,7 +82,7 @@
                 </div>
                 <hr>
 
-                <button type="submit" [disabled]="loginUsuario.invalid" class="btn btn-sky btn-lg mb-3 w-200">Ingresar</button>
+                
                 <p class="font-weight-bold pr text-center">¿No tienes cuenta? <a [routerLink]="['/Registrate']">Registrar</a></p>
                 <p class="font-weight-bold pr text-center">¿No recuerdas tu contraseña? <a
                         routerLink="/RecoveryPassword"> <br> Recuperar Contraseña</a></p>

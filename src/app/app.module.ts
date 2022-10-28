@@ -27,6 +27,9 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { RecoveryPasswordComponent } from './Authentication/recovery-password/recovery-password.component';
 import { VerificarCorreoComponent } from './Authentication/verificar-correo/verificar-correo.component';
 import { RegistrarUsuarioComponent } from './Authentication/registrar-usuario/registrar-usuario.component';
+import { PerfilComponent } from './Authentication/perfil/perfil.component';
+import { MenuPrivateComponent } from './component/menu-private/menu-private.component';
+import { CartComponent } from './Component/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { RegistrarUsuarioComponent } from './Authentication/registrar-usuario/re
     RecoveryPasswordComponent,
     VerificarCorreoComponent,
     RegistrarUsuarioComponent,
+    PerfilComponent,
+    MenuPrivateComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

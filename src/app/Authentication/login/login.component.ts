@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { async } from '@firebase/util';
 import { ToastrService } from 'ngx-toastr';
 import { AuthErrorService } from 'src/app/services/auth-error.service';
-import { CloudFirestoreService } from 'src/app/services/cloud-firestore.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -25,51 +25,63 @@ export class LoginComponent implements OnInit {
   loginUsuario : FormGroup;
   loading: boolean = false;
   showButtonLog: boolean = true;
+  token: string = '';
 
   constructor(private fb: FormBuilder,
-    private afAuth: AngularFireAuth,
+    private fireauth: AngularFireAuth,
     private toastr: ToastrService,
-    private routes: Router,
+    private router: Router,
     private authErrorService: AuthErrorService,
-    public FirestoreCloud : CloudFirestoreService,
-    private auth: AuthService){ 
+    public auth: AuthService){ 
       this.loginUsuario = this.fb.group({
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
       })
+
+      // this.auth.stateAuth().subscribe(res =>{
+      //   console.log(res);
+      //   if(res !== null){
+      //     this.uid = res.uid;
+      //     this.getUserInfo(this.uid)
+      //   }else{
+      //     this.initClient();
+      //   }
+      // })
     }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    const uid = await this.auth.getUid();
+    console.log(uid);
+    
   }
 
-  login(){
-    const email = this.loginUsuario.value.email;
-    const password = this.loginUsuario.value.password;
-    this.loading = true;
+  initCliente(){
+    // this.uid = '';
+  }
 
-    this.afAuth.signInWithEmailAndPassword(email, password).then((user)=>{
-      console.log(user);
-      if(user.user?.emailVerified){
-        localStorage.setItem('token', JSON.stringify(this.afAuth.user));
-        this.routes.navigate(['/MenuWithLogin'])
-      }else{
-        this.routes.navigate(['/VerificarCorreo'])
-      }
-    }).catch((error)=>{
-      this.loading = false;
-      this.toastr.error(this.authErrorService.firebaseError(error.code), 'Error');
-    })
-    if(this.afAuth.user){
-      this.showButtonLog = false; //Ya hizo el registro y no se mostrará el btn
+ //Iniciar Sección
+ login(){
+  const email = this.loginUsuario.value.email;
+  const password = this.loginUsuario.value.password;
+  this.loading = true;
+
+  this.fireauth.signInWithEmailAndPassword(email, password).then((user)=>{
+    console.log(user);
+    if(user.user?.emailVerified){
+      this.router.navigate(['/MenuWithLogin'])
     }else{
-      this.showButtonLog= true; //El user aun no se registra, se mostrará el btn
+      this.router.navigate(['/VerificarCorreo'])
     }
-  }
+  }).catch((error)=>{
+    this.loading = false;
+    this.toastr.error(this.authErrorService.firebaseError(error.code), 'Error');
+  }) 
+}
 
   signInWithGoogle(){
     this.auth.googleSignIn();
     if(localStorage.getItem("token") != null){
-      return JSON.parse(localStorage.getItem("token")!);
+      return JSON.parse(localStorage.getItem('token')!);
     }
   }
 }

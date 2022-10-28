@@ -1,0 +1,46 @@
+<div class="container contenido">
+    <div class="row">
+        <div class="col-3 mt-3">
+            <div class="mt-3">
+                <img [src]="cliente.avatar" alt="" class="avatar mt-3 mb-3">
+                <button class="btn btn-primary" (change)="newImgUpload($event)">Cambiar foto</button>
+            </div>
+            <label for="" class="mt-3 mb-1">Nombre de usuario: </label>
+            <br>
+                <input [(ngModel)]="cliente.nombre" type="text" readonly="readonly">
+                      
+            <div class="mt-3">
+                <label for="">Correo ELectronico: </label>
+                <br>
+                <input [(ngModel)]="cliente.email" type="email" readonly="readonly">
+            </div>
+            <div class="mt-3">
+                <label for="">Numero telefonico: </label>
+                <br>
+                <input [(ngModel)]="cliente.celular" type="number" readonly="readonly">
+            </div>
+            <div class="mt-3">
+                <label for="">Dirección de envio: </label>
+                <br>
+                <iframe src="" title="description">
+                    <input [(ngModel)]="cliente.ubicacion" type="text" readonly="readonly">
+                </iframe>
+            </div>
+        </div>      
+    </div>
+    <div class="row ml-5">
+        <div class="m-3 text-left col-3">
+            <label for="" class="m-auto">Password: </label><br>
+            <button class="btn btn-primary mb-3 w-auto" routerLink="/RecoveryPassword">Cambiar contraseña</button>
+        </div>
+        <div class="text-center col-3">
+            <abbr title="Tus datos estan siendo tratados confidencialmente, puedes consultar los T&C en el siguiente link"> <label for="">Ayuda <i class="bi bi-question-circle-fill"></i></label></abbr>
+            <br>
+            <button class="btn btn-primary mb-3 w-auto" routerLink="/RecoveryPassword">Leer T&C</button>
+        </div>
+        <div class="m-3 text-end col-4">
+            <br>
+            <button class="btn btn-danger mb-3 w-auto" routerLink="/Home" (click)="logOut()">Cerrar Seccion</button>
+        </div>
+    </div>
+</div>

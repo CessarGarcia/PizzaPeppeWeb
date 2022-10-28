@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+//Alerta ya puedes pedir
+.alert-atention{
+    background-color: rgb(1, 255, 14);
+    height: 100px;
+    width: 900px;
+    margin: 25px auto;   
+}
+
+strong{
+    font-weight: bold;
+    font-size: xx-large;
+    color:rgb(218, 216, 216);
+    text-shadow: 0.1em 0.1em 0.05em #333;
+}
+//Fin alet 
+
+
+
+
+//Datos del Usuario
+.DataUser{
+    background-color: #ff4500;
+    width: 50%;
+    margin: 10px auto;
+    color: #fff;
+    height: auto;
+    font-size: 20px;
+    animation: DataUser 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes DataUser {
+    0% {background-color: #ff9100;}
+    25% {background-color: #ff7b00;}
+    50% {background-color: #ffa500;}
+    50% {background-color: rgb(226, 32, 32);}
+    100% {background-color: orangered;}
+}
+
+h2{
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+    margin-bottom: 40%;
+}
+.content {
+	margin-left: 35%;
+    padding-top: 5%;
+}
+.content h2 {
+	color: #fff;
+	font-size: 50px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px rgb(4, 159, 248);
+}
+.content h2:nth-child(2) {
+	color: purple;
+	animation: texto 4s ease-in-out infinite;
+}
+@keyframes texto {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+//Btn Ver perfil y Cerrar Sección 
+.btn-deg{
+    background: -webkit-repeating-linear-gradient(-45deg, #00EF6A, #00F788, #25dd28, #12da55, #01F682, #01F4C3, #01b6fd);
+    background-size: 1px 100px;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 30px;
+    height: 60px;
+    animation: animate 10s ease-in-out infinite;
+}
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    25% {
+        background-position: 100% 0;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.PUser{
+    margin-top: 5%;
+    font-family: 'Pacifico', cursive;
+    text-transform: capitalize;
+}
+//Fin datos usuario
+
+
+
+@media screen and (max-width: 800px){  
+    *{
+        max-width: 100%;
+    }
+    .DataUser{
+        width: 90%;
+        height: auto;
+    }
+   
+    .PUser{
+        font-size: 20px;
+        margin-top: 80px;
+    }
+    .btn-deg{
+        height: 50px;
+        margin-top: 18% !important;
+    }
+    .fs-3{
+        font-size: 15px !important;
+    }
+    .content {
+        margin-left: 110px;
+        padding-top: 5%;
+    }
+    .content h2 {
+        font-size: 25px;
+        margin-top: 35px;
+    }
+    .menuCompleto{
+        width: 80%;
+        margin: 25px;
+    }
+}

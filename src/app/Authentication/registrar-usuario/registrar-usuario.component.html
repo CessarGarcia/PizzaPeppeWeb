@@ -89,6 +89,8 @@
                         La <strong>Contraseña</strong> debe tener como minimo 6 caracteres
                     </span>
                 </div>
+                <!-- <button type="submit" [disabled]="registrarUsuario.invalid" class="btn btn-sky btn-lg mb-3 w-200">Registrate</button> -->
+                <button type="submit" (ngSubmit)="registrar()" [disabled]="registrarUsuario.invalid" class="btn btn-sky btn-lg mb-3 w-200">Registrate</button>
                 <hr>
                <!--Btn Google-->
                <div id="gSignInWrapper" role="button">
@@ -107,9 +109,8 @@
                 </button>
             </div>
                 <hr>
-                <button type="submit" [disabled]="registrarUsuario.invalid" class="btn btn-sky btn-lg mb-3 w-200">Registrate</button>
                 <p class="font-weight-bold pr text-center">¿Ya tienes cuenta? <a routerLink="/LogIn" class="link">Inicia Sección</a></p>       
-                
+                <button (click)="logOut()" class="btn btn-sky btn-lg mb-3 w-200">Cerrar Seccion</button>
             </form>
         </div>
         </div>

@@ -1,163 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/*      Archivo princial     */
 
-.DataUser{
-    background-color: #ff4500;
-    width: 50%;
-    margin: 10px auto;
-    color: #fff;
-    height: 150px;
-    font-size: 20px;
-    animation: DataUser 4s;
-    animation-iteration-count: infinite;
-}
-@keyframes DataUser {
-    0% {background-color: #ff9100;}
-    25% {background-color: #ff7b00;}
-    50% {background-color: #ffa500;}
-    50% {background-color: rgb(226, 32, 32);}
-    100% {background-color: orangered;}
-}
-h2{
-    font-family: 'DM Serif Display', serif;
-    font-weight: bold;
-    margin-bottom: 40%;
-}
-.content {
-	margin-left: 35%;
-    padding-top: 5%;
-}
-.content h2 {
-	color: #fff;
-	font-size: 50px;
-	position: absolute;
-	transform: translate(-50%, -50%);
-}
-.content h2:nth-child(1) {
-	color: transparent;
-	-webkit-text-stroke: 2px rgb(4, 159, 248);
-}
-.content h2:nth-child(2) {
-	color: purple;
-	animation: texto 4s ease-in-out infinite;
-}
-@keyframes texto {
-	0%,
-	100% {
-		clip-path: polygon(
-			0% 45%,
-			16% 44%,
-			33% 50%,
-			54% 60%,
-			70% 61%,
-			84% 59%,
-			100% 52%,
-			100% 100%,
-			0% 100%
-		);
-	}
-
-	50% {
-		clip-path: polygon(
-			0% 60%,
-			15% 65%,
-			34% 66%,
-			51% 62%,
-			67% 50%,
-			84% 45%,
-			100% 46%,
-			100% 100%,
-			0% 100%
-		);
-	}
-}
-.btn-deg{
-    background: -webkit-repeating-linear-gradient(-45deg, #00EF6A, #00F788, #25dd28, #12da55, #01F682, #01F4C3, #01b6fd);
-    background-size: 1px 100px;
-    color: #fff;
-    font-weight: bolder;
-    border-radius: 30px;
-    height: 60px;
-    animation: animate 10s ease-in-out infinite;
-    margin-top: -10% !important;
-}
-@keyframes animate {
-    0% {
-        background-position: 0 0;
-    }
-
-    25% {
-        background-position: 100% 0;
-    }
-
-    50% {
-        background-position: 100% 100%;
-    }
-
-    75% {
-        background-position: 0% 100%;
-    }
-
-    100% {
-        background-position: 0% 0%;
-    }
+// Estilos globales
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
 }
 
-.PUser{
-    margin-top: 5%;
-    font-family: 'Pacifico', cursive;
-    text-transform: capitalize;
-}
-.img-navMenu{
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    margin-left: 15px;
-    padding-bottom: 25px;
-    float: left;  
-}
-
-.img-navMenu-Refrescos{
-    border-radius: 50px;
-    width: 120px;
-    height: 120px;
-    margin: 5px;
-    margin-left: 15px;
-    padding-bottom: 25px;
-    float: left; 
-}
-
-.details{
-    display: inline;
-    float: left;
-    max-width: 80%;
-}
-.carrito{
-    max-width: 25%;
-    width: 25%;
-    background-color: #00EF6A;
-    height: auto;
-    /* display: block; */
-    margin-right: 20px;
-    float: right;
-    padding-top: -80%;
-    padding-bottom: 20px;
-    color: #fff;
-    margin-bottom: 20px;
-}
-details{
-    background-color: rgba(8, 144, 255, 0.5);
-    width: 80%;
+//Cart Productos
+details {
+    background-color: rgb(255, 102, 0);
+    width: 250px;
     height: auto;
     border-radius: 30px;
-    /* margin: 5px; */
     overflow: hidden;
     display: inline-block;
-    z-index: 30;
     position: relative;
+    margin: 5px 0 5px 0;
 }
 
-summary{
+summary {
     font-size: 20px;
     color: #fff;
     text-align: center;
@@ -166,293 +27,46 @@ summary{
     font-weight: bold;
 }
 
-.menuItems, .menuItems2, .menuItems-Refrescos{
-    background-color: rgb(218, 216, 216);
-    border-radius: 15px;
-    border-color: #7F7F7F;
-    border-style: solid;
-    border-width: 7px;
-    margin: auto;
-    margin-top: 15px;
-    align-items: center;
+details>img {
+    max-width: 100px;
+    max-height: 100px;
 }
 
-.menuItems{
-    width: auto;
-    height: 430px;
-}
-.menuItems2{
-    width: auto;
-    height: 310px;
-}
-.menuItems-Refrescos{
-    width: 500px;
-    height: 210px;
-}
-.menu > .ImgEx{
-    width: 100px;
-    height: 100px;
-    margin: 10px auto;
-}
-.flex{   /*Desing Flex*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: auto;
-}
-
-.title-Refrescos{
-    background-color: #FF0000;
-    width: 80%;
-    height: 40px;
+h5 {
     color: #fff;
-    text-align: center;
-    padding: 10px;
-    border-radius: 30px;
-    overflow: hidden;
-    margin: auto;
-    margin-top: 10px;
-}
-.title-Refrescos > p{
     font-size: 20px;
 }
 
-.menuImg{
-    padding-top: 20px;
-}
-.title{
-    background-color: #FF0000;
-    width: 80%;
-    height: 70px;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    border-radius: 30px;
-    overflow: hidden;
-    margin: auto;
-    margin-top: 10px;
-}
-p{
-    font-family: 'Poppins', sans-serif;
-    font-size: 25px;
-    margin-bottom: -1px;
-}
-.P-menu{
-    color: #5f5e5e;
-    font-weight: bolder;
+span {
+    font-weight: bold;
     font-size: 20px;
-    text-align: center;
+    color: rgb(218, 216, 216);
+    text-shadow: 0.1em 0.1em 0.05em #333;
 }
 
-hr{
-    width: 80%;
-    color:#404040;
-    position: relative;
-    margin: auto;
+span>strong {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(218, 216, 216);
+    text-shadow: 0.1em 0.1em 0.05em #333;
 }
 
-.btn-card{
+.btn-card {
     border-radius: 20px;
     padding: 0 auto;
-    margin-right: 10px ;
+    margin-right: 10px;
     height: 40px;
     float: right;
+    margin: 20px;
 }
+//Fin Cart Productos
 
-.tr-Titulo{
-    background-color: rgb(212, 0, 255);
-    color: #fff;
-}
-.table-responsive{
-    width: auto;
-    margin: auto;
-    margin-bottom: 15px;
-    display: table;
-}
-
-            /*Estilos para la tabla Aderezos */
-.table-green{
-    background-color: rgba(0, 255, 55, 0.8);
-}
-
-.table-Aderezos{
-    width: auto;
-    margin: 0 auto;
-    margin-bottom: 15px;
-}
-
-.btn-card-aderezos{
-    padding: 0 auto;
-    border-radius: 20px;
-    margin-top: 5px;
-    height: auto;
-    width: 70px;
-}
-
-@media screen and (max-width: 800px){  
-    *{
-        max-width: 100%;
-    } 
-    .carrito{
-        max-width: 100%;
-        width: 90%;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-    .DataUser{
-        width: 90%;
-        height: auto;
-    }
-
-    .content h2 {
-        color: #fff;
-        font-size: 30px;
-        margin-top: 35px;
-        margin-left: 15%;
-    }
-    .PUser{
-        font-size: 20px;
-        margin-top: 80px;
-    }
-    .btn-deg{
-        background-size: 1px 80px;
-        color: #fff;
-        border-radius: 30px;
-        height: 50px;
-        margin-top: 18% !important;
-    }
-    b{
-        text-shadow: 0.1em 0.1em 0.05em #888383;
-        color: red;
-        font-size: 15px;
-    }
-
-    img{
-        width: 300px;
-        height: 200px;
-    }
-    .menuItems{
-        width: auto;
-        height: 500px;
-    }
-    .menuItems2{
-        height: 250px;
-    }
-    .menuImg{
-        width: auto;
-        height: auto;
-    }
-
-    .P-menu{
-        font-size: 15px;
-    }
-    .btn-card{
-        padding: 0 auto;
-        margin-top: -25px;
-    }
-    .menuItems-Refrescos{
-        width: 100%;
-        height: 1000px;
-        display: inline;
-    }
-    .table-responsive{
-        width: auto;
-        margin: auto;
-        padding: auto;
-    }   
-   
-    .flex{
-        height: auto;
-        overflow-y: auto;
-    }
-    .btn-card-aderezos{
-        width: 40px;
-    }
-    .details{
-        display: inline;
-        float: left;
-        max-width: 100%;
+//addCart
+@media screen and (max-width: 800px){
+    .appcart{
+        margin: 0 auto;
+        max-width: 250px;
+        margin-left: 50%;
     }
 }
-
-@media screen and (max-width: 500px){
-    .title > p{
-        font-size: 15px;
-    }
-    .title{
-        width: 100px;
-        height: auto;
-    }
-    .menuItems{
-        width: 170px;
-        height: 300px;
-    }
-    .menuImg{
-        width: 100px;
-        height: 130px;
-        margin-bottom: 8px;
-    }
-    .P-menu{
-        font-size: 9px;
-    }
-    .btn-card{
-        width: 120px;
-        height: 30px;
-        padding-top: 10px;
-        padding: 0 auto;
-        font-size: 10px;
-    }
-    .img-navMenu-Refrescos{
-        width: 50px;
-        height: 65px;
-    }
-    /* .menuItems-Refrescos{
-        width: auto;
-        height: 150px;
-        display: inline-block;
-    } */
-    .table-responsive{
-        width: auto;
-        margin: auto;
-        padding: auto;
-    }
-    .table-Aderezos{
-        width: auto;
-        display: inline-block;
-        margin-bottom: 35px;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .menuItems-Refrescos{
-        width: auto;
-        height: 200px;
-    }
-    .btn-card{
-       padding-bottom: -80px;
-       margin-bottom: -80px;
-       padding: 0 auto;
-    }
-    /* .menuItems-Refrescos{
-        width: auto;
-        height: 150px;
-        display: inline-block;
-    } */
-    .title-Refrescos > p{
-        font-size: 15px;
-    }
-    .table-responsive{
-        width: 300px;
-        overflow-x: auto;
-        display: block;
-    }
-    .table-Aderezos{
-        width: auto;
-        display: inline-block;
-        margin-bottom: 35px;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-}
+    

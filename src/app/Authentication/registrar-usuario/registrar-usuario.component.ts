@@ -5,6 +5,10 @@ import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { AuthErrorService } from 'src/app/services/auth-error.service';
 import { GoogleAuthProvider } from '@firebase/auth';
+import { AuthService } from '../service/auth.service';
+import { Cliente } from 'src/app/models';
+import { FirestoreService } from 'src/app/services/firestore.service';
+import { FirestorageService } from 'src/app/services/firestorage.service';
 
 @Component({
   selector: 'app-registrar-usuario',
@@ -24,12 +28,26 @@ export class RegistrarUsuarioComponent implements OnInit {
   usuario: string;
   nombre: string;
   apellido: string;
+  newFile: string;
+
+  cliente: Cliente ={
+    uid: '',
+    nombre: '',
+    avatar: '',
+    email: '',
+    password: '',
+    celular: 0,
+    ubicacion: '',
+  };
 
   constructor(private fb: FormBuilder,
-    private afAuth: AngularFireAuth, //afAuth metodo para autentificar desde AngularFireAuth
+    public afAuth: AngularFireAuth, //afAuth metodo para autentificar desde AngularFireAuth
+    public firestoreService : FirestoreService,
+    public firestorageService: FirestorageService,
     private toastr: ToastrService,
     private routes: Router,
     private authErrorService: AuthErrorService,
+    public auth:AuthService
 ) { 
 this.registrarUsuario = this.fb.group({
 email: ['', [Validators.required, Validators.email]],
@@ -38,56 +56,87 @@ repetirPassword: ['', [Validators.required, Validators.minLength(6)]],
 })
 }
 
-  ngOnInit(): void {
+async ngOnInit() {
+  const uid = await this.auth.getUid();
+  console.log(uid);
+  
+}
+
+    //Auth con Google
+  signInWithGoogle(){
+    this.auth.googleSignIn();
   }
 
-  //Auth con Google
-signInWithGoogle(){
-  return this.authLogin(new GoogleAuthProvider())
-}
-
 authLogin(provider: any){
-  return this.afAuth.signInWithPopup(provider).then(res => {
-    this.toastr.success('Se ha ingresado correctamente', 'Login Correcto');
-    this.routes.navigate(['/MenuWithLogin']);
-    localStorage.setItem('token',JSON.stringify(res.user?.uid));
-  }).catch((error)=> {
-    this.toastr.error(this.authErrorService.firebaseError(error.code), 'Error');
-  })
+  this.auth.authLogin(provider);
 }
 
-//Registro con Email y contraseña
-registrar(){
-  const email = this.registrarUsuario.value.email;
-  // const usuario = this.registrarUsuario.value.usuario;
-  // const nombre = this.registrarUsuario.value.nombre;
-  // const apellido = this.registrarUsuario.value.apellido;
-  const password = this.registrarUsuario.value.password;
-  const repetirPassword = this.registrarUsuario.value.repetirPassword;
+  //  async registrarse(){
+  //     const credenciales ={
+  //       email: this.cliente.email,
+  //       password: this.cliente.password
+  //     };
+  //     const res = await this.auth.registrar(credenciales.email, credenciales.password).catch(err =>{
+  //       console.log('error', err);
+        
+  //     });
+  //     console.log(res);
+      
+  //   }
 
-    /* Verificar Passwords */
-    if (password !== repetirPassword) {
-      this.toastr.error('Las contraseñas no son las mismas', "Error");
-      return;
+    logOut(){
+      this.auth.logout();
     }
-  this.loading = true;
 
-    /* Creación de usuarios por Email y contraseña */
-  this.afAuth.createUserWithEmailAndPassword(email, password).then(() => {
-    this.verificarCorreo();
-    localStorage.setItem(email, password);
-  }).catch((error) => {
-    this.loading = false;
-    console.log(error);
-    this.toastr.error(this.authErrorService.firebaseError(error.code), 'Error');
-  })
- }
+
+
+      //Registro con Email y contraseña
+      async registrar(){
+        const email = this.registrarUsuario.value.email;
+        const password = this.registrarUsuario.value.password;
+        const repetirPassword = this.registrarUsuario.value.repetirPassword;
+    
+        /* Verificar Passwords */
+        if (password !== repetirPassword) {
+            this.toastr.error('Las contraseñas no son las mismas', "Error");
+            return;
+        }
+        this.loading = true;
+    
+        /* Creación de usuarios por Email y contraseña */
+        const res = await this.afAuth.createUserWithEmailAndPassword(email, password).then(() => {
+        this.verificarCorreo();
+        localStorage.setItem(email, password);
+        }).catch((error) => {
+        this.loading = false;
+        console.log(error);
+        this.toastr.error(this.authErrorService.firebaseError(error.code), 'Error');
+        })
+        const uid = await this.auth.getUid();
+        // this.cliente.uid = uid;
+        // this.guardarUser();
+        console.log(uid);
+      }
 
    //Verificar Correo
    verificarCorreo() {
-    this.afAuth.currentUser.then((user) => user?.sendEmailVerification()).then(() => {
-      this.toastr.info('Le hemos enviado un correo electronico para verificar su cuenta', 'Verificar Correo');
-      this.routes.navigate(['/LogIn']);
-    });
-  } 
+    this.auth.verificarCorreo();
+   } 
+
+   //Guardar usuarios en la BDFirebase
+  // async guardarUser(){
+  //   const path = 'Clientes';
+  //   const name = this.cliente.nombre;
+  //   if(this.newFile !== undefined){
+  //     const res = await this.firestorageService.uploadImage(this.newFile, path, name);
+  //     this.cliente.avatar = res;
+  //   }
+  //   this.firestoreService.createDoc(this.cliente, path, this.cliente.uid).then(res =>{
+  //     console.log('Guardado con exito');
+      
+  //   }).catch(error =>{
+
+  //   });
+  // }
+
 }

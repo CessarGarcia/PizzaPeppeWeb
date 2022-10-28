@@ -1,26 +1,7 @@
 <body>
     <div class="container row align-items-center">
         <div class="container-col col mb-5">
-            <h3 class="text-danger mt-3 ">Resumen del pedido</h3>
-    
-            <table lang="es" class="table table-bordered table-hover table-responsive">
-                <thead class="table-red">
-                  <tr class="tr-Titulo">
-                    <th scope="col"> Producto</th>
-                    <th scope="col"> Cantidad</th>
-                    <th scope="col"> Precio </th>
-                  </tr>
-                </thead>
-                <tbody>
-                    <!--
-                  <tr *ngFor="let Combos of Menu" >
-                    <td>{{Combos.Id}}</td>
-                    <td>{{Combos.Precio}}</td>
-                    <td>{{Combos.Descripcion}} <br/> </td> 
-                  </tr>
-                  -->
-                </tbody>
-              </table>
+            <app-cart></app-cart>
         </div>
     
         <div class="container-col col mb-5">
@@ -64,11 +45,11 @@
             <div class="MPay">
                 <abbr title="La sumatoria de los anteriores campos"> <p> Gran Total: <em class="GranTotal">$498.802</em></p></abbr>
             </div>
-    
+        
             <button class="btn btn-deg mt-3 mb-3">
                 Finaliza tu pedido
             </button>
-    
+        
             <label style="font-size: 14px;" class="font-italic">
                 <input type="radio" name="sexo" id="Card" value="Submit" class="mr-2" required> Al dar clic en Finalizar pedido aceptas los Términos y Condiciones
             </label>

@@ -1,0 +1,46 @@
+/*Para todo*/
+*{
+    color: #fff;
+    margin: auto;
+}
+
+/*Global*/
+.contenido{
+    background: rgb(34,193,195);
+   background: linear-gradient(45deg, rgba(101,253,45,1) 0%, rgba(31,105,241,1) 15%, rgba(25,195,182,1) 35%, rgb(34,193,195) 55%, rgba(34,193,195,1) 75%, rgba(0,212,255,1) 85%, rgba(101,253,45,1) 99%);
+}
+i{
+    cursor: pointer;
+}
+label{
+    font-size: 20px;
+}
+abbr > label{
+    cursor: pointer;
+}
+input{
+    background-color: #fff;
+    color: #000;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    border-color: #fff;
+    width: auto;
+    height: auto;
+}
+
+iframe{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+
+/*Ayudas*/
+.m-auto{
+    margin: auto;
+}
+
+/*Por partes*/
+.avatar{
+    border-radius: 100%;
+    
+}

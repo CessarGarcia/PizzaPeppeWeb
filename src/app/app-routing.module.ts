@@ -17,6 +17,7 @@ import { PaycardComponent } from './paycard/paycard.component';
 import { RecoveryPasswordComponent } from './Authentication/recovery-password/recovery-password.component';
 import { VerificarCorreoComponent } from './Authentication/verificar-correo/verificar-correo.component';
 import { MenuPrivateComponent } from './component/menu-private/menu-private.component';
+import { PerfilComponent } from "./Authentication/perfil/perfil.component";
 
 const routes: Routes = [
     {path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -30,6 +31,7 @@ const routes: Routes = [
     {path: 'VerificarCorreo', component: VerificarCorreoComponent},
     {path: 'RecoveryPassword', component: RecoveryPasswordComponent},
     {path: 'MenuWithLogin', component: MenuPrivateComponent},
+    {path: 'perfil', component: PerfilComponent},
    //Wild Card Route for 404 request
     { path: '**', pathMatch: 'full', component: Error404Component },
   ];

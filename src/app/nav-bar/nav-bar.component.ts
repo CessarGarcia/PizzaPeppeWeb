@@ -21,9 +21,9 @@ export class NavBarComponent {
       if(localStorage.getItem("token") != null){
         return JSON.parse(localStorage.getItem("token")!);
       }
-      this.showButtonLog = false; //Ya hizo el registro y no se mostrará el btn
+      this.showButtonLog = true; //Ya hizo el registro y no se mostrará el btn
     }else{
-      this.showButtonLog= true; //El user aun no se registra, se mostrará el btn
+      this.showButtonLog= false; //El user aun no se registra, se mostrará el btn
     }
   }
 }

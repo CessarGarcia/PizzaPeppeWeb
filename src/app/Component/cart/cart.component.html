@@ -1,0 +1,27 @@
+<div class="float-right">
+    <h3 class="text-danger mt-3">Resumen del pedido</h3>
+
+    <table lang="es" class="table table-primary table-striped">
+        <thead>
+            <tr>
+                <th> Nombre</th>
+                <th> Cantidad</th>
+                <th> Precio </th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let Producto of productos" >
+                <tr>
+                    <td>{{Producto.nombre}}</td>
+                    <td>{{Producto.items}}</td>
+                    <td>{{Producto.precio | currency: 'MXN'}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+
+    <p>Total {{total | currency: 'MXN'}}</p>
+    <div class="tex-end float-right">
+        <button class="btn btn-success btn-lg">Comprar</button>
+    </div>
+</div>
